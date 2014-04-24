@@ -1,6 +1,7 @@
 # Dependencies
 markdown:         redcarpet
 pygments:         true
+gems: ["emoji_for_jekyll", "jekyll-compass"]
 
 # Permalinks
 permalink:        pretty
@@ -15,7 +16,7 @@ author:
   name:           Mark Otto
   url:            https://twitter.com/mdo
 
-paginate:         1
+paginate:         3
 
 # Custom vars
 version:          1.0.0

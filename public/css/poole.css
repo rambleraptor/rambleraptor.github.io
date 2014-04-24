@@ -434,7 +434,12 @@ a.pagination-item:hover {
   }
 }
 
-
+/*
+ * Masthead
+ * Alex's custom changes for the masthead
+ * TODO: Let's change all of this to SASS and clean up this nightmare.
+ * TODO: Maybe merge with poole?
+ */
 .masthead {
 	max-width: 100%;
 	background-color: #AC281C;
@@ -461,4 +466,30 @@ a.pagination-item:hover {
 	font-weight: normal;
 }	
 
+
+/*
+ * Homepage
+ * Various changes for the homepage portion
+ */
+
+.home_title{
+	margin: 0 auto;
+	text-align: center;
+	height: auto;
+	margin-top: 7.5rem;
+	margin-bottom: 7.5rem;
+}
+
+.home_images{
+	margin: 0 auto;
+}
+.home_images img{
+	height: 3rem;
+	width: 3rem;
+	display: inline;
+}
+
+.home_images .social_img{
+	margin-right: 5rem;
+}
 
