@@ -3,7 +3,7 @@ layout: post
 title: Dropbox for SSH
 date: February 18, 2013
 ---
-# Dropbox for SSH
+
 
 At the university level, a serious problem occurs when you want to code on your computer: you have to compile it elsewhere. The official university complier might be newer, older, or you just want to be super safe. So what do you do? You could either:
 	- Use a flash drive (so low tech)

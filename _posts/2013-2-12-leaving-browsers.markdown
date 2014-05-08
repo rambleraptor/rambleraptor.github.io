@@ -3,7 +3,6 @@ layout: post
 title: Leaving Browsers Behind
 date: Feburary 12, 2013
 ---
-# Leaving Browsers Behind
 
 I've been tweaking the "design" of this blog for quite a while now (I'm clearly not an art major). And the internet pointed out something interesting to me when I was going to tweak the solid color opacity.
 

@@ -3,7 +3,7 @@ layout: post
 title: Favicons
 date: March 13, 2013
 ---
-#Favicons
+
 
 Note: This was from an old iteration of this blog. I don't even know where the favicon is. It looked pretty bad though.
 
