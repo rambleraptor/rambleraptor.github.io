@@ -1,20 +1,19 @@
 # Dependencies
 markdown:         redcarpet
-pygments:         true
-gems: ["emoji_for_jekyll", "jekyll-compass"]
+highlighter:      pygments
 
 # Permalinks
 permalink:        pretty
 
 # Setup
 title:            Alex Stephen
-tagline:          The Jekyll Butler
-description:      Base theme for Jekyll themes by @mdo.
-url:              http://getpoole.com
+tagline:          My blog
+description:      My blog
+url:              http://alexstephen.me
 
 author:
-  name:           Mark Otto
-  url:            https://twitter.com/mdo
+  name:           Alex Stephen
+  url:            https://alexstephen.me
 
 paginate:         3
 
@@ -22,4 +21,4 @@ paginate:         3
 version:          1.0.0
 
 github:
-  repo:           https://github.com/poole/poole
+  repo:           https://www.github.com/astephen2/astephen2.github.io
