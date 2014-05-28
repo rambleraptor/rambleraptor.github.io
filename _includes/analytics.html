@@ -3,5 +3,7 @@
         mixpanel.init("7ea7ebd62ebeeadc4b7cd7bc7390a46a");</script><!-- end Mixpanel -->
 
     <script type="text/javascript">
-        mixpanel.track_links(".post .post-title a", "Post loaded")
+        mixpanel.track_links(".post .post-title a", "Post loaded", {
+                "referrer": document.referrer
+        });
     </script>
