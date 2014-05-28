@@ -8,7 +8,7 @@ permalink:        pretty
 # Setup
 title:            Alex Stephen
 tagline:          My blog
-description:      My blog
+description:      Technology and life from Alex Stephen
 url:              http://alexstephen.me
 
 author:
@@ -22,3 +22,7 @@ version:          1.0.0
 
 github:
   repo:           https://www.github.com/astephen2/astephen2.github.io
+
+post:
+  template:       post
+  extension:      markdown 
