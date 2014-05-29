@@ -1,7 +1,7 @@
 <script type="text/javascript">
     {% if page.path contains '_posts' %}
-    mixpanel.track('Post: {{page.title}}')
+    mixpanel.track('Post: {{page.title}}');
     {% else %}
-    mixpanel.track('Arrived at static page')
+    mixpanel.track('Arrived at static page');
     {% endif %}
 </script>
