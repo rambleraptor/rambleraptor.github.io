@@ -1,0 +1,17 @@
+alexstephen.me
+
+/* TEAM */
+    Creator: Alex Stephen
+    Contact: stepa@umich.edu
+    Twitter: @astep92
+    From: Michigan
+
+/* SITE */
+    Language: English
+    Doctype: HTML5
+    IDE: Vim, Sublime
+
+/* TECH */
+    Jekyll
+    Poole
+    Github
