@@ -8,7 +8,7 @@ date: Jan 18. 2015
 
 We're about 20 hours in so far. Or rather we've got 11:16 left according to MHacks app. Math isn't exactly my friend at this point of the night. I'm not exactly sure what a number is anymore (but I definitely know what an int or float is.)  It's always a wonder why people choose to abuse themselves through hackathons. If you code in class, why would you possibly spend all weekend doing it with no sleep and nothing but catered food and cookies? It's something I'm pretty curious about right now, as I'm mentally exhausted, physically drained, and starring at my Facebook feed full of partying friends. 
 
-There's a huge frenzy around hackathons right now. I just counted a bazillion (10) Facebook groups without trying. There's a major league in the vein of the MLB or the football people. People are running around in their pajamas with an IV of Red Bull, 3 different VR devices, and a combination of exhaustion and exhiliration. Some poor overworked recruiters are staying up all night to impress college students. It's incredible.
+There's a huge frenzy around hackathons right now. I just counted a bazillion (10) Facebook groups without trying. There's a major league in the vein of the MLB or the football people. People are running around in their pajamas with an IV of Red Bull, 3 different VR devices, and a combination of exhaustion and exhilaration. Some poor overworked recruiters are staying up all night to impress college students. It's incredible.
 
 I'm a bit of an outsider on the topic. I only go to my local hackathon, I never win and I usually bail out early. I've never gotten a job offer from one and my laptop doesn't have four layers of startup stickers. But, here are my thoughts, anyways.
 
@@ -26,7 +26,7 @@ I feel like there's a very profound quote about mindsets, but it's escaping me. 
 ## The Reservations
 
 ### Food
-Today, I've had some chicken, potatoes, veggies, pizza, and cookies. That's the menu. Tomorrow will be Panera and bagels. It's decent. But, it's also incredibly unhealthy. I'm not the best eater on a good day, but even I think that this is a little much. I haven't seen a piece of fruit all weekend. I have nothing but empathy for hackathon organizers. They're organizing a free event for hundreds of people. Food isn't cheap and fresh food isn't the easiet to come by in bulk.
+Today, I've had some chicken, potatoes, veggies, pizza, and cookies. That's the menu. Tomorrow will be Panera and bagels. It's decent. But, it's also incredibly unhealthy. I'm not the best eater on a good day, but even I think that this is a little much. I haven't seen a piece of fruit all weekend. I have nothing but empathy for hackathon organizers. They're organizing a free event for hundreds of people. Food isn't cheap and fresh food isn't the easiest to come by in bulk.
 
 ### Code
 Hackathons write bad code. I've written terrible code this weekend. It's riddled with errors. There's misspellings. I'm not even sure if everything works. But, if I hit certain buttons in a certain order and pray really hard, things generally work. That's a pretty bad practice. But, that's what's encouraged when I need a final "polished" product in 3 days. I'm painting a cardboard box to look like a car. Hope nobody tries to drive it.
@@ -34,7 +34,7 @@ Hackathons write bad code. I've written terrible code this weekend. It's riddled
 On a quick note, I'd love to see prizes for the best pull request. Encourage people to write code that other people are going to use.
 
 ### Sleep
-There's a perception in American culture that hard work can solve anything. The gold diggers thought so - just dig more and you'll find gold! But, it's a flawed philosphy. There's only so much a person can work. And it's hardly healthy. I feel like hackathons perpetrate that myth. Nobody here has gotten more than 5 hours of sleep this weekend. If I get 5 hours in one night, that was a bad night. And this is over a weekend - 3 days. Are we really expecting this from people in the real world? 
+There's a perception in American culture that hard work can solve anything. The gold diggers thought so - just dig more and you'll find gold! But, it's a flawed philosophy. There's only so much a person can work. And it's hardly healthy. I feel like hackathons perpetrate that myth. Nobody here has gotten more than 5 hours of sleep this weekend. If I get 5 hours in one night, that was a bad night. And this is over a weekend - 3 days. Are we really expecting this from people in the real world? 
 
 There's some obvious logistical issues that make all of those three things happen. Hackathons can't run over a week and money doesn't grow on trees...yet (I'm sure somebody is working on this). They may not be great, but they work well enough.
 
@@ -45,4 +45,4 @@ But, I don't think hackathons are for everybody. They aren't for me. When I look
 
 But, more importantly, I don't want coding to consume my life. Coding culture doesn't seem great for balance. I'm expected to be coding long weeks and then learning on the side. That's the hacker culture - this constant process of learning, and building, and fixing. For some people, it works great. But, I think that balance is going to become key as programming becomes more finely ingrained into our lives. 
 
-There's this circlejerk culture where everyone is screaming about "disruption" and "innovation" and the newest trends. I feel like that's consumed the conversation about hackathons and hacking in general. I think there's more to it. I think there's people out there who see programming as a career or a hobby - not as their livelihood. I hope those people, myself included, can speak up more. Programming can start to be a career and not as a life.
+There's this circlejerk culture where everyone is screaming about "disruption" and "innovation" and the newest trends. I feel like that's consumed the conversation about hackathons and hacking in general. I think there's more to it. I think there's people out there who see programming as a career or a hobby - not as their livelihood. I hope those people, myself included, can speak up more. Programming shouldn't your life. And I feel like hackathons are one of the many forces that say differently.
