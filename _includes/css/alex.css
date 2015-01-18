@@ -56,3 +56,23 @@
 .home_images .social_img {
 	margin-right: 13.815%;
 }
+
+.post-date{
+    display: inline;
+    float: right;
+    margin: 0;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.post{
+    height: 3em;
+    margin-bottom: 3em;
+    line-height: 2em;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.post-title{
+    display: inline;
+}
