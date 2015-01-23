@@ -49,14 +49,15 @@ end
 
 def create_post(title, template, extension)
     check_title(title)
-    filename = "#{DATE}-#{transform_to_slug(title, extension)}"
+    filename = "_#{DATE}-#{transform_to_slug(title, extension)}"
     content = read_file(template)
     create_file(POSTS, filename, content, title)
 end
+
 # == Tasks ==
 
 desc "Create a post in _posts"
-task :post, :title do |t, args|
+task :post, [:title] do |t, args|
     title = args[:title]
     template = CONFIG["post"]["template"]
     extension = CONFIG["post"]["extension"]
