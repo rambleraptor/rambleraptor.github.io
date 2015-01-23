@@ -45,16 +45,23 @@
 }
 
 .home_images{
-	height: 3rem;
-	overflow: hidden;
-}
-.home_images img{
-	width: 7.894%;
-	display: inline;
+    text-align: justify;
+    min-width: 100%;
 }
 
-.home_images .social_img {
-	margin-right: 13.815%;
+.social_img{
+    height: 100%;
+	display: inline-block;
+}
+
+.home_images img{
+    height: 3em;
+}
+
+.home_images:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
 }
 
 .post-date{
