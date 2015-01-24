@@ -4,6 +4,8 @@ layout: post
 date: Jan 18. 2015
 ---
 
+![Picture of MHacks Logo](/public/images/2015/mhacks_picture.png)
+
 # I don't hackathon that much. But when I do hackathon, I always go to MHacks. 
 
 We're about 20 hours in so far. Or rather we've got 11:16 left according to MHacks app. Math isn't exactly my friend at this point of the night. I'm not exactly sure what a number is anymore (but I definitely know what an int or float is.)  It's always a wonder why people choose to abuse themselves through hackathons. If you code in class, why would you possibly spend all weekend doing it with no sleep and nothing but catered food and cookies? It's something I'm pretty curious about right now, as I'm mentally exhausted, physically drained, and starring at my Facebook feed full of partying friends. 
