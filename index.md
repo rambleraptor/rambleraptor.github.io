@@ -1,6 +1,6 @@
 ---
 layout: index
-title: Alex Stephen
+title:
 ---
 
 # I write code.
