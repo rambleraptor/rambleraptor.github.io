@@ -55,6 +55,7 @@ body {
 
 html {
   font-family: $blog_font, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: subpixel-antialiased;
   font-size: 16px;
   line-height: 1.5;
 }
