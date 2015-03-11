@@ -1,6 +1,6 @@
 ---
 title: "Guatemala" 
-layout: post
+layout: guatemala
 date: 2015-03-09 01:07:16
 ---
 
@@ -30,7 +30,7 @@ We stayed in a beautiful little hotel in the town of Antigua. I've never seen a 
 
 The food turned out to be anything but toxic. It was delicious. The freshest produce arranged into flavorful dishes of eggs, chicken, rice, beans, potatoes and so much more. I didn't expect so much variety of food and I didn't expect how much of a treat it all would be. We had three meals daily at our homestay and each one was a highlight of the day. 
 
-One thing that did surprise me was the driving. I've never thought of driving as a particularly scary endeavor. Accidents do unfortunately occur, but there is a system in place that tries to minimize them. Guatemala didn't feel like that. It felt like NASCAR with oncoming traffic and scooters for good measure. I can't remember how many times I thought our driver was about to hit somebody and how many times I thought somebody was inching far too close to us. Even in the most populated areas, I don't visibilty remember any stop lights. Every intersection turned into a negotiation with the people around us. It was this strange mixture of hostage negotation and Russian roulette. 
+One thing that did surprise me was the driving. I've never thought of driving as a particularly scary endeavor. Accidents do unfortunately occur, but there is a system in place that tries to minimize them. Guatemala didn't feel like that. It felt like NASCAR with oncoming traffic and scooters for good measure. I can't remember how many times I thought our driver was about to hit somebody and how many times I thought somebody was inching far too close to us. Even in the most populated areas, I don't visibilty remember any stop lights. Every intersection turned into a negotiation with the people around us. It was this strange mixture of pseudo high-speed hostage negotation and Russian roulette. 
 
 ## Work
 There's a false idea that volunteers are meant to rescue a community and galvanize its occupants into saving themselves. It's a really easy trap to fall into when you know that you're helping people who are "less privileged." It's definitely a trap that I fell into before the trip began.
@@ -41,7 +41,7 @@ The families and the masons were so much of the reason why. Even though we were 
 
 The masons were such a great source of knowledge. They were incredibly knowledgeable about their trade and helped us through every step of the process. Despite our inexperience (and complete inability to do anything right), none of them seemed irritated at us.
 
-Overall, I feel like I was given so much more from this work than I possibly could have put in. I learned so much from the masons and befriended them all. I'm even friends with one on Facebook! The families were so kind and thought us all about generosity when you have so little.
+Overall, I feel like I was given so much more from this work than I possibly could have put in. I learned so much from the masons and befriended them all. I'm even friends with one on Facebook! The families were so kind and taught us all about generosity when you have so little.
 
 ## Touristy Stuff
 Throughout the week, we did a whole bunch of "touristy" things that I'd be remiss not to mention.
