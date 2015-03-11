@@ -26,3 +26,7 @@ github:
 post:
   template:       _post_template.md
   extension:      markdown 
+
+sass:
+  sass_dir: _sass
+  style: compressed
