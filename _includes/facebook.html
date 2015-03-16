@@ -1,16 +1,19 @@
 <meta content="{{ site.title }}" property="og:site_name">
 {% if page.title %}
   <meta content="{{ page.title }}" property="og:title">
+{% else if post.title %}
+  <meta content="{{ post.title }}" property="og:title">
 {% else %}
   <meta content="{{ site.title }}" property="og:title">
 {% endif %}
-{% if page.title %}
+
+{% if page.title or post.title %}
   <meta content="article" property="og:type">
 {% else %}
   <meta content="website" property="og:type">
 {% endif %}
 
-{% if page %}
+{% if page or post %}
  <meta property="og.description" content="{{page.content | strip_html | xml_escape | truncate: 200 }}">
 {% else %}
 <meta content="{{ site.description }}" property="og:description">
