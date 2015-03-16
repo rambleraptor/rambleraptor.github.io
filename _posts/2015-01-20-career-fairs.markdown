@@ -2,6 +2,7 @@
 title: Career Fairs 
 layout: post
 date: January 20, 2015
+description: A post all about the hell that are career fairs
 ---
 
 # Career Fairs - Theme Parks without Rides
