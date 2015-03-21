@@ -1,6 +1,6 @@
 ---
 layout: index
-title:
+title: Home
 ---
 
 # I write code.
