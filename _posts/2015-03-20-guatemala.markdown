@@ -1,7 +1,7 @@
 ---
 title: "Guatemala" 
 layout: guatemala
-date: 2015-03-09 01:07:16
+date: March 20th, 2015
 picture: /public/images/2015/guatemala/background_pic.jpg
 description: Over Spring Break, I went on a volunteer trip to Guatemala with some of the coolest people. Here are my thoughts on the week.
 ---
