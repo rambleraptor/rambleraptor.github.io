@@ -29,10 +29,10 @@
   <meta content="{{ site.url }}" property="article:author">
 {% endif %}
 {% if page.picture %}
-  <meta content="{{ page.picture }}" property="og:image">
+<meta content="{{site.url}}{{ page.picture }}" property="og:image">
 {% else %}
   <!-- Looped through images to get this -->
-  <meta content="{{site.url}}/public/favicon.png" property="og:image">
+  <meta content="{{site.url}}public/favicon.png" property="og:image">
 {% endif %}
 {% if page.categories %}
   {% for category in page.categories limit:1 %}
