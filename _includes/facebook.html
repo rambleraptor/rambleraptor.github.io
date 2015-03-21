@@ -21,6 +21,9 @@
 <meta content="{{ site.description }}" property="og:description">
 {% endif %}
 
+{% if page.url %}
+  <meta content="{{ site.url }}{{ page.url }}" property="og:url">
+{% endif %}
 
 {% if page.date %}
   <meta content="{{ page.date | date_to_xmlschema }}" property="article:published_time">
@@ -42,3 +45,6 @@
   <meta content="{{ tag }}" property="article:tag">
   {% endfor %}
 {% endif %}
+
+<meta property="og:site_name" content="{{ site.url}}">
+<meta property="og:locale" content="en_US">
