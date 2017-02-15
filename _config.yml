@@ -5,6 +5,8 @@ url: https://rambleraptor.github.io
 description: It's a blog!
 future: true
 google_analytics_tracking_id: UA-47334320-2
+gems:
+  - jekyll-seo-tag
 
 # SEO Social
 twitter:
