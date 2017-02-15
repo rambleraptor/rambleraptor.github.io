@@ -4,7 +4,7 @@ name: Alex Stephen
 url: https://www.alexstephen.me
 description: It's a blog!
 future: true
-google_analytics_tracking_id: 
+google_analytics_tracking_id: UA-38317192-1
 gems:
   - jekyll-seo-tag
 
