@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <title>
+    Static initializers will murder your family &ndash; Alex Stephen
+  </title>
+
+  <!-- Begin Jekyll SEO tag v2.1.0 -->
+<meta property="og:title" content="Static initializers will murder your family" />
+<meta name="description" content="But only if your family is code." />
+<meta property="og:description" content="But only if your family is code." />
+<link rel="canonical" href="http://localhost:4000/posts/static-initializers/" />
+<meta property="og:url" content="http://localhost:4000/posts/static-initializers/" />
+<meta property="og:site_name" content="Alex Stephen" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2014-04-22T00:00:00-07:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@rambleraptor" />
+<meta name="twitter:creator" content="@rambleraptor" />
+<script type="application/ld+json">
+{"@context": "http://schema.org",
+"@type": "BlogPosting",
+"headline": "Static initializers will murder your family",
+"datePublished": "2014-04-22T00:00:00-07:00",
+"description": "But only if your family is code.",
+"url": "http://localhost:4000/posts/static-initializers/"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <link rel="alternate" type="application/rss+xml" href="/atom.xml" />
+
+  <link rel="stylesheet" href="/css/base.css" type="text/css" media="screen, projection" />
+  <link rel="stylesheet" href="/css/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="/css/mobile.css" type="text/css" media="screen, projection" />
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png" />
+  <link rel="icon" type="image/png"  href="/images/favicon.png">
+
+  <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-47334320-2']);
+    _gaq.push(['_setDomainName', 'http://localhost:4000']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+</head>
+<body>
+  <div class="top-line"></div>
+  <div class="container">
+    <header class="sidebar">
+    <a href="/"><h1 class="avatar">Alex's Rambles</h1></a>
+
+      <div class="sidebar-text">
+        <section class="meta">
+          <a href="https://github.com/rambleraptor" target="_blank" title="Peep at my GitHub" aria-label="Peep at my GitHub">
+            <svg viewBox="0 0 18 18" style="display: inline-block; width: 16px; height: 16px;"><g><path d="M8 0C3.58 0 0 3.582 0 8c0 3.535 2.292 6.533 5.47 7.59.4.075.547-.172.547-.385 0-.19-.007-.693-.01-1.36-2.226.483-2.695-1.073-2.695-1.073-.364-.924-.89-1.17-.89-1.17-.725-.496.056-.486.056-.486.803.056 1.225.824 1.225.824.714 1.223 1.873.87 2.33.665.072-.517.278-.87.507-1.07-1.777-.2-3.644-.888-3.644-3.953 0-.873.31-1.587.823-2.147-.083-.202-.358-1.015.077-2.117 0 0 .672-.215 2.2.82.638-.178 1.323-.266 2.003-.27.68.004 1.364.092 2.003.27 1.527-1.035 2.198-.82 2.198-.82.437 1.102.163 1.915.08 2.117.513.56.823 1.274.823 2.147 0 3.073-1.87 3.75-3.653 3.947.287.246.543.735.543 1.48 0 1.07-.01 1.933-.01 2.195 0 .215.144.463.55.385C13.71 14.53 16 11.534 16 8c0-4.418-3.582-8-8-8"></path></g></svg>
+          </a>
+          <a href="https://twitter.com/rambleraptor" target="_blank" title="Follow me on twitter" aria-label="Follow me on Twitter">
+            <svg viewBox="0 0 18 18" style="display: inline-block; width: 16px; height: 16px;"><g><path d="M16 3.038c-.59.26-1.22.437-1.885.517.677-.407 1.198-1.05 1.443-1.816-.634.375-1.337.648-2.085.795-.598-.638-1.45-1.036-2.396-1.036-1.812 0-3.282 1.468-3.282 3.28 0 .258.03.51.085.75C5.152 5.39 2.733 4.084 1.114 2.1.83 2.583.67 3.147.67 3.75c0 1.14.58 2.143 1.46 2.732-.538-.017-1.045-.165-1.487-.41v.04c0 1.59 1.13 2.918 2.633 3.22-.276.074-.566.114-.865.114-.21 0-.416-.02-.617-.058.418 1.304 1.63 2.253 3.067 2.28-1.124.88-2.54 1.404-4.077 1.404-.265 0-.526-.015-.783-.045 1.453.93 3.178 1.474 5.032 1.474 6.038 0 9.34-5 9.34-9.338 0-.143-.004-.284-.01-.425.64-.463 1.198-1.04 1.638-1.7z" fill-rule="nonzero"></path></g></svg>
+          </a>
+          <a href="/atom.xml" title="Atom RSS feed" aria-label="Atom RSS feed" class="og">📝</a>
+        </section>
+
+        <nav class="sections">
+          <ul>
+            <li><a href="/about">about</a></li>
+            <li><a href="/">posts</a></li>
+            
+              
+              <li><a href="/life">life</a></li>
+            
+              
+              <li><a href="/tech">tech</a></li>
+            
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- <link rel="stylesheet" href="/css/scroller.css" type="text/css" media="screen, projection"/> -->
+<section class="content">
+  <h1>
+    <a href="/posts/static-initializers/">Static initializers will murder your family</a>
+  </h1>
+
+  <section class="byline">
+    April 22, 2014 ⚬ 
+  </section>
+
+  <p>But only if your family is code.</p>
+
+<p>So this is a bit of a terrible blog post because a) it’s about a really obscure atrocity that happens in C++ (as opposed to the common atrocities that happen in C++ on the regs) and b) there are not enough funnies in the world to make up for it. I recommend skipping it if you’ve just eaten, are feeling light-headed, or don’t want to make eye contact with C++. As a general policy, you should probably never make eye contact with C++. It can smell fear.</p>
+
+<h2 id="programmer-meet-static-initializers">Programmer, meet static initializers</h2>
+<p>We’re going to be talking about static class objects, or objects defined in a global/unnamed namespace, such as these fellas:</p>
+
+<figure class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="k">namespace</span> <span class="p">{</span>
+<span class="k">static</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">kSquirrel</span> <span class="o">=</span> <span class="s">"sad squirrel"</span><span class="p">;</span>
+<span class="k">static</span> <span class="k">const</span> <span class="n">Superhero</span> <span class="n">batman</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c1">// or
+</span><span class="k">class</span> <span class="nc">Foo</span> <span class="p">{</span>
+  <span class="k">static</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">panda_</span> <span class="o">=</span> <span class="s">"also a sad panda"</span><span class="p">;</span>  
+<span class="p">}</span></code></pre></figure>
+
+<p><em>Static initialization</em> is the dance we do when creating these objects. This is not a dance we do when we initialize things with <em>constant</em> data (like <code class="highlighter-rouge">static int x = 42</code>); the compiler sees that the thing after the <code class="highlighter-rouge">=</code> is constant and can’t change, so it can inline it. However, if you try to initialize a variable by running code (e.g. <code class="highlighter-rouge">static int x = foo()</code>), then this is not a constant anymore, and it will result in a static initializer. In C++11, I think <code class="highlighter-rouge">constexpr</code> will let you hint to the compiler that the thing after the equal is a constant expression, if it is that, so it can compute it at compile-time. I don’t get to use a lot of C++11, so this is still about nightmares of C++ past, and I don’t think <code class="highlighter-rouge">constexpr</code> will do away with all of the murders anyway. Finally, the compiler promises you to run all the static initializers before the body of <code class="highlighter-rouge">main()</code> is executed. That, unfortunately, doesn’t mean much.</p>
+
+<h2 id="why-static-initializers-are-bad-news-bears">Why static initializers are bad news bears</h2>
+<p>As Douglas Adams, the inventor of C++ said, static initializers have “made a lot of people very angry and been widely regarded as a bad move”. Apart from being hard to spell, they tend to throw up on your shoes:</p>
+
+<ul>
+  <li>Static variables in the same <em>compilation unit</em> (or the same file) will be constructed in the order they are defined. This means that this code is predictable, and always does exactly what you think it does. This is also the last of the good news:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="k">namespace</span> <span class="p">{</span>
+<span class="k">static</span> <span class="n">Superhero</span> <span class="n">batman</span><span class="p">;</span>
+<span class="k">static</span> <span class="n">Superhero</span> <span class="n">robin</span> <span class="o">=</span> <span class="n">batman</span><span class="p">.</span><span class="n">getSidekick</span><span class="p">();</span>
+<span class="p">}</span></code></pre></figure>
+
+<ul>
+  <li>Static variables in <em>different</em> translation units are constructed in an undefined order. This is so terrible it has its own name: the <a href="http://www.parashift.com/c++-faq/static-init-order.html">static initialization order fiasco</a>. It goes like this:</li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-c--" data-lang="c++">  <span class="c1">// In x.cpp:
+</span>  <span class="k">static</span> <span class="n">Superhero</span> <span class="n">batman</span><span class="p">;</span>
+
+  <span class="c1">// In y.cpp:
+</span>  <span class="k">static</span> <span class="n">Superhero</span> <span class="n">robin</span><span class="p">(</span><span class="n">batman</span><span class="p">.</span><span class="n">getSidekick</span><span class="p">());</span>
+  <span class="c1">// If that wasn't believable, imagine it was something like:
+</span>  <span class="c1">// static Superhero robin(BestSuperhero::batman);
+</span>  <span class="c1">// where BestSuperhero is a namespace or a static class and
+</span>  <span class="c1">// you call batman.getSidekick() in robin's constructor.
+</span>  </code></pre></figure>
+
+<p>Yup. That’s it. Whether <code class="highlighter-rouge">x.cpp</code> or <code class="highlighter-rouge">y.cpp</code> gets compiled first is not defined (because C++), which means if <code class="highlighter-rouge">y.cpp</code> gets compiled first, <code class="highlighter-rouge">batman</code> hasn’t been constructed. You know what happens when you call <code class="highlighter-rouge">getSidekick()</code> on an uninitialized object? Regrets happen.</p>
+
+<ul>
+  <li>We’re not done yet. Why have insanely terrible code when you can have insanely terrible EXPENSIVE code! Evan Martin has a really, really good <a href="http://neugierig.org/software/chromium/notes/2011/08/static-initializers.html">post</a> about this, but the tl;dr is that because the static initializers need to happen before <code class="highlighter-rouge">main()</code>, that code needs to be paged, which leads to disk seeks, which leads to awful startup performance. Seriously, read Evan’s post because it’s amazing.</li>
+</ul>
+
+<h2 id="spotting-static-initializers-in-the-wild-an-incomplete-manual">Spotting static initializers in the wild: an incomplete manual</h2>
+<p>Here are some examples of things that are and aren’t static initializers, so
+that at least we know what we’re looking for before we try to fix them.</p>
+
+<figure class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="c1">// Both of these are ok, because 0 is a compile time constant, so it can't
+// change. The const doesn't make a difference; it's the thing after
+// the = sign that makes the difference.
+</span><span class="k">static</span> <span class="k">const</span> <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="k">static</span> <span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+<span class="c1">// Below, both the pointer and the chars in the string are const, so the
+// compiler will treat this as a compile-time constant. So this is ok
+// because both the thing before and after the = sign are constant.
+</span><span class="k">static</span> <span class="k">const</span> <span class="kt">char</span> <span class="n">panda</span><span class="p">[]</span> <span class="o">=</span> <span class="s">"happy panda"</span><span class="p">;</span>
+
+<span class="c1">// This, however, calls a constructor, so it's not ok.
+</span><span class="k">static</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">sad_panda</span> <span class="o">=</span> <span class="s">"sad panda"</span><span class="p">;</span>
+
+<span class="k">static</span> <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>  
+<span class="c1">// This is not ok, because the thing after the = sign isn't a const,
+// so it can change before b is initialized.
+</span><span class="k">static</span> <span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>  
+
+<span class="c1">// This has to call the Muppet() constructor, and who knows what that
+// does, so it's definitely not a const, and a case of the static initializers.
+</span><span class="k">static</span> <span class="n">Muppet</span> <span class="n">waldorf</span><span class="p">;</span></code></pre></figure>
+
+<h2 id="thems-the-breaks">Them’s the breaks</h2>
+<p>There’s a couple of ways in which you can fix this, some better than others:</p>
+
+<ul>
+  <li>The best static initializer is no static initializer, so try const-ing all your things away. This will take you as far as defining an array of strings, for which you can’t pray the initializer away. (Trivia: Praying The Const Away™ is what I call a <code class="highlighter-rouge">const_cast</code>)</li>
+  <li>Place all your globals in the same compilation unit (i.e. a massive <code class="highlighter-rouge">constants.cpp</code> file). You can certainly try this, but if your project is the giant Snuffleupagus that Chrome is, you might be laughed at</li>
+  <li>Place the static globals inside the function that needs them (or, if they’re the village bicycle, make a getter for them), and define them as function-static variables. Then you know they will be initialized only once, the first time that function is called. Whenever it is called</li>
+</ul>
+
+<p>That last bullet sounds like black magic, so here’s an example. This is the static initializer that we are trying to fix. Convince yourself that this code is no good:</p>
+
+<figure class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="k">namespace</span> <span class="p">{</span>
+<span class="k">static</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">bucket</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="s">"apples"</span><span class="p">,</span> <span class="s">"pears"</span><span class="p">,</span> <span class="s">"meerkats"</span><span class="p">};</span>
+<span class="p">}</span>
+
+<span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">GetBucketThing</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="n">bucket</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>We can fix it by moving <code class="highlighter-rouge">bucket</code> into <code class="highlighter-rouge">GetBucketThing()</code>:</p>
+
+<figure class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">GetBucketThing</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// Sure, it's a non-trivial constructor, but it will get called once,
+</span>  <span class="c1">// the first time GetBucketThing() gets called, which will be at runtime
+</span>  <span class="c1">// and therefore a-ok.
+</span>  <span class="k">static</span> <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">bucket</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="s">"apples"</span><span class="p">,</span> <span class="s">"pears"</span><span class="p">,</span> <span class="s">"meerkats"</span><span class="p">};</span>
+  <span class="k">return</span> <span class="n">bucket</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Yup. That’s pretty much it. If you want more reading on the topic, here’s a neat chromium-dev <a href="https://groups.google.com/a/chromium.org/forum/#!topic/chromium-dev/p6h3HC8Wro4">thread</a> discussing this in more details (and talking about when these static globals are actually cleaned up).</p>
+
+<h2 id="mmmmkay">Mmmmkay.</h2>
+<p>I don’t know why you’ve made it this far. Maybe you thought there was going to be a joke or a prize at the end. There isn’t. There’s just this gif, and you could’ve just scrolled down for it.</p>
+
+<p><img src="https://media.giphy.com/media/3boPPdHk2ueo8/giphy.gif" alt="puppy" /></p>
+
+</section>
+
+
+    <section class="content">
+      <div class="footer">
+        <section class="thanks">
+          <span>thanks for reading!</span>
+        </section>
+        <section class="twitter">
+                <a href="https://twitter.com/share" class="twitter-share-button" data-via="rambleraptor" title="Tweet at me!" aria-label="Tweet at me!">Tweet</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        </section>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

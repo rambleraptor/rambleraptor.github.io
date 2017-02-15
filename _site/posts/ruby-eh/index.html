@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <title>
+    Ruby for Canadians: an instruction manual &ndash; Alex Stephen
+  </title>
+
+  <!-- Begin Jekyll SEO tag v2.1.0 -->
+<meta property="og:title" content="Ruby for Canadians: an instruction manual" />
+<meta name="description" content="One of the hardships about being Canadian is that most programming languages are quite simply, rude. Descriptions like ‘imperative’ and ‘declarative’ are enough to fill even the most impolite of Canadians with a vague sense of discomfort. Fear no more! Ruby is the sort of language that addresses all these concerns, and adds a familiar, maple-syrupy feel to your code. Here are the codes, for your perusal." />
+<meta property="og:description" content="One of the hardships about being Canadian is that most programming languages are quite simply, rude. Descriptions like ‘imperative’ and ‘declarative’ are enough to fill even the most impolite of Canadians with a vague sense of discomfort. Fear no more! Ruby is the sort of language that addresses all these concerns, and adds a familiar, maple-syrupy feel to your code. Here are the codes, for your perusal." />
+<link rel="canonical" href="http://localhost:4000/posts/ruby-eh/" />
+<meta property="og:url" content="http://localhost:4000/posts/ruby-eh/" />
+<meta property="og:site_name" content="Alex Stephen" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2014-02-25T00:00:00-08:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@rambleraptor" />
+<meta name="twitter:creator" content="@rambleraptor" />
+<script type="application/ld+json">
+{"@context": "http://schema.org",
+"@type": "BlogPosting",
+"headline": "Ruby for Canadians: an instruction manual",
+"datePublished": "2014-02-25T00:00:00-08:00",
+"description": "One of the hardships about being Canadian is that most programming languages are quite simply, rude. Descriptions like ‘imperative’ and ‘declarative’ are enough to fill even the most impolite of Canadians with a vague sense of discomfort. Fear no more! Ruby is the sort of language that addresses all these concerns, and adds a familiar, maple-syrupy feel to your code. Here are the codes, for your perusal.",
+"url": "http://localhost:4000/posts/ruby-eh/"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <link rel="alternate" type="application/rss+xml" href="/atom.xml" />
+
+  <link rel="stylesheet" href="/css/base.css" type="text/css" media="screen, projection" />
+  <link rel="stylesheet" href="/css/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="/css/mobile.css" type="text/css" media="screen, projection" />
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png" />
+  <link rel="icon" type="image/png"  href="/images/favicon.png">
+
+  <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-47334320-2']);
+    _gaq.push(['_setDomainName', 'http://localhost:4000']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+</head>
+<body>
+  <div class="top-line"></div>
+  <div class="container">
+    <header class="sidebar">
+    <a href="/"><h1 class="avatar">Alex's Rambles</h1></a>
+
+      <div class="sidebar-text">
+        <section class="meta">
+          <a href="https://github.com/rambleraptor" target="_blank" title="Peep at my GitHub" aria-label="Peep at my GitHub">
+            <svg viewBox="0 0 18 18" style="display: inline-block; width: 16px; height: 16px;"><g><path d="M8 0C3.58 0 0 3.582 0 8c0 3.535 2.292 6.533 5.47 7.59.4.075.547-.172.547-.385 0-.19-.007-.693-.01-1.36-2.226.483-2.695-1.073-2.695-1.073-.364-.924-.89-1.17-.89-1.17-.725-.496.056-.486.056-.486.803.056 1.225.824 1.225.824.714 1.223 1.873.87 2.33.665.072-.517.278-.87.507-1.07-1.777-.2-3.644-.888-3.644-3.953 0-.873.31-1.587.823-2.147-.083-.202-.358-1.015.077-2.117 0 0 .672-.215 2.2.82.638-.178 1.323-.266 2.003-.27.68.004 1.364.092 2.003.27 1.527-1.035 2.198-.82 2.198-.82.437 1.102.163 1.915.08 2.117.513.56.823 1.274.823 2.147 0 3.073-1.87 3.75-3.653 3.947.287.246.543.735.543 1.48 0 1.07-.01 1.933-.01 2.195 0 .215.144.463.55.385C13.71 14.53 16 11.534 16 8c0-4.418-3.582-8-8-8"></path></g></svg>
+          </a>
+          <a href="https://twitter.com/rambleraptor" target="_blank" title="Follow me on twitter" aria-label="Follow me on Twitter">
+            <svg viewBox="0 0 18 18" style="display: inline-block; width: 16px; height: 16px;"><g><path d="M16 3.038c-.59.26-1.22.437-1.885.517.677-.407 1.198-1.05 1.443-1.816-.634.375-1.337.648-2.085.795-.598-.638-1.45-1.036-2.396-1.036-1.812 0-3.282 1.468-3.282 3.28 0 .258.03.51.085.75C5.152 5.39 2.733 4.084 1.114 2.1.83 2.583.67 3.147.67 3.75c0 1.14.58 2.143 1.46 2.732-.538-.017-1.045-.165-1.487-.41v.04c0 1.59 1.13 2.918 2.633 3.22-.276.074-.566.114-.865.114-.21 0-.416-.02-.617-.058.418 1.304 1.63 2.253 3.067 2.28-1.124.88-2.54 1.404-4.077 1.404-.265 0-.526-.015-.783-.045 1.453.93 3.178 1.474 5.032 1.474 6.038 0 9.34-5 9.34-9.338 0-.143-.004-.284-.01-.425.64-.463 1.198-1.04 1.638-1.7z" fill-rule="nonzero"></path></g></svg>
+          </a>
+          <a href="/atom.xml" title="Atom RSS feed" aria-label="Atom RSS feed" class="og">📝</a>
+        </section>
+
+        <nav class="sections">
+          <ul>
+            <li><a href="/about">about</a></li>
+            <li><a href="/">posts</a></li>
+            
+              
+              <li><a href="/life">life</a></li>
+            
+              
+              <li><a href="/tech">tech</a></li>
+            
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- <link rel="stylesheet" href="/css/scroller.css" type="text/css" media="screen, projection"/> -->
+<section class="content">
+  <h1>
+    <a href="/posts/ruby-eh/">Ruby for Canadians: an instruction manual</a>
+  </h1>
+
+  <section class="byline">
+    February 25, 2014 ⚬ 
+  </section>
+
+  <p>One of the hardships about being Canadian is that most programming languages are quite simply, rude. Descriptions like ‘imperative’ and ‘declarative’ are enough to fill even the most impolite of Canadians with a vague sense of discomfort. Fear no more! Ruby is the sort of language that addresses all these concerns, and adds a familiar, maple-syrupy feel to your code. <a href="https://github.com/notwaldorf/ruby-eh">Here</a> are the codes, for your perusal.</p>
+
+<h2 id="theres-no-such-thing-as-too-polite">There’s no such thing as ‘too polite’</h2>
+<p>Ruby lets you open your classes and teach your fellow programmers some basic manners:</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Object</span>
+  <span class="k">def</span> <span class="nf">please</span>
+    <span class="nb">self</span>
+  <span class="k">end</span>
+  <span class="kp">alias_method</span> <span class="ss">:eh</span><span class="p">,</span> <span class="ss">:please</span>
+  <span class="kp">alias_method</span> <span class="ss">:eh?</span><span class="p">,</span> <span class="ss">:please</span>
+  <span class="kp">alias_method</span> <span class="ss">:pardon</span><span class="p">,</span> <span class="ss">:please</span>
+  <span class="kp">alias_method</span> <span class="ss">:pardon?</span><span class="p">,</span> <span class="ss">:please</span>
+<span class="k">end</span>
+<span class="k">module</span> <span class="nn">Kernel</span>
+  <span class="kp">alias_method</span> <span class="ss">:sane_puts</span><span class="p">,</span> <span class="ss">:puts</span>
+  <span class="kp">alias_method</span> <span class="ss">:giver</span><span class="p">,</span> <span class="ss">:puts</span>
+  <span class="k">def</span> <span class="nf">puts</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+      <span class="n">sane_puts</span> <span class="s2">"If you don't mind, "</span> <span class="o">+</span> <span class="n">s</span>
+    <span class="k">end</span>
+<span class="k">end</span>
+</code></pre>
+</div>
+
+<p>Now you can write correct and civilized code like you’ve always wanted:</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="n">giver</span> <span class="s2">"maple syrup"</span><span class="p">.</span><span class="nf">please</span><span class="p">.</span><span class="nf">reverse</span><span class="p">.</span><span class="nf">eh?</span>
+<span class="c1"># If you don't mind, purys elpam</span>
+</code></pre>
+</div>
+
+<h2 id="dont-forget-about-quebec">Don’t forget about Quebec</h2>
+<p>Ruby is the first language to pioneer French as the one true language. We have translated all the methods in <code class="highlighter-rouge">Array</code> and stored them in a dictionary called <code class="highlighter-rouge">translations</code>, that contains entries of the form <code class="highlighter-rouge">:english_foo =&gt; :french_foo</code>. A small iteration,</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Array</span>
+  <span class="nc">Array</span><span class="p">.</span><span class="nf">instance_methods</span><span class="p">(</span><span class="kp">false</span><span class="p">).</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">f</span><span class="o">|</span>
+    <span class="k">if</span> <span class="n">translations</span><span class="p">.</span><span class="nf">key?</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+      <span class="kp">alias_method</span> <span class="n">translations</span><span class="p">[</span><span class="n">f</span><span class="p">],</span> <span class="n">f</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre>
+</div>
+
+<p>And we can write glorious code that would make Quebec proud</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="k">def</span> <span class="nf">articles_aleatoires</span><span class="p">(</span><span class="n">matrice</span><span class="p">)</span>
+  <span class="n">matrice</span><span class="p">.</span><span class="nf">echantillon</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="nb">rand</span><span class="p">(</span><span class="n">matrice</span><span class="p">.</span><span class="nf">compte</span><span class="p">))</span>
+<span class="k">end</span>
+<span class="n">articles_aleatoires</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+<span class="c1"># =&gt; [1, 2]</span>
+</code></pre>
+</div>
+
+<h2 id="canadian-slang">Canadian slang</h2>
+<p>Fans of <a href="http://en.wikipedia.org/wiki/Bob_and_Doug_McKenzie">Bob and Doug McKenzie</a> can breathe a sigh of relief to know that Ruby speaks the language of the Great White North, eh?</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Exception</span>
+  <span class="k">alias</span> <span class="ss">:sane_to_s</span> <span class="ss">:to_s</span>
+  <span class="k">def</span> <span class="nf">to_s</span>
+    <span class="n">sane_to_s</span> <span class="o">+</span> <span class="s2">". Take off, hoser."</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+<span class="c1"># &gt;&gt; raise ArgumentError</span>
+<span class="c1"># ArgumentError: uncaught throw ArgumentError. Take off, hoser.</span>
+</code></pre>
+</div>
+
+<h2 id="digression-for-non-canadians">Digression for non-Canadians</h2>
+<p>Of course, you can use this idea of open classes for truly magical features. Good code is nothing if not mildly interesting.</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Fixnum</span>
+  <span class="k">alias</span> <span class="ss">:sane_equals</span> <span class="ss">:==</span>
+  <span class="k">def</span> <span class="nf">==</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="n">not</span> <span class="nb">self</span><span class="p">.</span><span class="nf">sane_equals</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+<span class="c1"># &gt;&gt; 4 == 4</span>
+<span class="c1"># =&gt; false</span>
+<span class="c1"># &gt;&gt; 4 == 5</span>
+<span class="c1"># =&gt; true</span>
+</code></pre>
+</div>
+
+<h2 id="unicode">Unicode</h2>
+<p>This is where this post starts being less Canadian and more flat out crazy.</p>
+
+<p>Ruby is down with Unicode in identifiers. That’s because Ruby is down with pretty much everything. The only thing I have yet to convince Ruby to do is to let me alias keywords, and I’m pretty sure that’s just because I haven’t tried hard enough.</p>
+
+<p>If you add a comment to gently nudge at an encoding, you too can write this production ready code:</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="c1"># encoding: utf-8</span>
+<span class="k">class</span> <span class="nc">Object</span>
+  <span class="k">def</span> <span class="err">☢</span>
+    <span class="n">sane_puts</span> <span class="s2">"BOOM"</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre>
+</div>
+
+<p>Guess what calling ☢ will do. GUESS.</p>
+
+<p>Unicode can fill your boring, profesh code with whimsy:</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="k">if</span> <span class="err">☆</span> <span class="o">==</span> <span class="err">☂</span>
+    <span class="nb">puts</span> <span class="err">☎</span>
+<span class="k">end</span>
+</code></pre>
+</div>
+
+<p>Our advanced readers can also define a function named U+00A0, the non-breaking space, as seen <a href="http://www.rubyinside.com/the-split-is-not-enough-whitespace-shenigans-for-rubyists-5980.html">here</a>.</p>
+
+<h2 id="bare-words">Bare words</h2>
+<p>We all know that Ruby has bare words from Gary Bernhardt’s <a href="https://www.destroyallsoftware.com/talks/wat">Wat</a> talk, but did you know Ruby also allows you to have bare words as function names? Because that’s totally a thing you’d want. Thanks to <a href="http://99designs.com/tech-blog/blog/2012/10/30/abusing-ruby-for-fun-and-profit/">Richo Healey</a> for the example:</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="nb">self</span><span class="p">.</span><span class="nf">instance_exec</span> <span class="k">do</span>
+<span class="k">def</span> <span class="nf">method_missing</span><span class="p">(</span><span class="n">sym</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">)</span>
+  <span class="c1"># Splat args if passed in from a parent call</span>
+  <span class="k">if</span> <span class="n">args</span><span class="p">.</span><span class="nf">length</span> <span class="o">==</span> <span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nf">is_a?</span><span class="p">(</span><span class="no">Array</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">].</span><span class="nf">class</span> <span class="o">==</span> <span class="no">NameError</span>
+    <span class="n">args</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+  <span class="k">end</span>
+  <span class="n">method_names</span><span class="p">,</span> <span class="n">arguments</span> <span class="o">=</span> <span class="n">args</span><span class="p">.</span><span class="nf">partition</span> <span class="p">{</span> <span class="o">|</span><span class="n">a</span><span class="o">|</span> <span class="n">a</span><span class="p">.</span><span class="nf">class</span> <span class="o">==</span> <span class="no">NameError</span> <span class="p">}</span>
+  <span class="nb">method</span><span class="p">([</span><span class="n">sym</span><span class="p">.</span><span class="nf">to_s</span><span class="p">,</span> <span class="o">*</span><span class="n">method_names</span><span class="p">.</span><span class="nf">map</span><span class="p">(</span><span class="o">&amp;</span><span class="ss">:name</span><span class="p">)].</span><span class="nf">join</span><span class="p">(</span><span class="s2">" "</span><span class="p">)).</span><span class="nf">call</span><span class="p">(</span><span class="o">*</span><span class="n">arguments</span><span class="p">)</span>
+<span class="k">rescue</span> <span class="no">NameError</span> <span class="o">=&gt;</span> <span class="n">e</span>
+  <span class="k">return</span> <span class="p">[</span><span class="n">e</span><span class="p">,</span> <span class="o">*</span><span class="n">arguments</span><span class="p">]</span>
+<span class="k">end</span>
+<span class="k">end</span>
+</code></pre>
+</div>
+
+<p>Defining such a function doesn’t even look that improper, which is why I recommend moving the above code into a separate .rb file, deep at the bottom of a folder barrel.</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="nb">self</span><span class="p">.</span><span class="nf">class</span><span class="p">.</span><span class="nf">send</span><span class="p">(</span><span class="ss">:define_method</span><span class="p">,</span> <span class="ss">:"take off"</span><span class="p">)</span> <span class="k">do</span>
+  <span class="nb">puts</span> <span class="s2">"♫ ♪ Coo loo coo coo, coo coo coo coo ♬ ♪"</span>
+<span class="k">end</span>
+</code></pre>
+</div>
+
+<p>This leads to the most excellent of results, and a job well done:</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="n">take</span> <span class="n">off</span>
+<span class="c1"># &gt;&gt; If you don't mind, ♫ ♪ Coo loo coo coo, coo coo coo coo ♬ ♪</span>
+<span class="c1"># =&gt; nil</span>
+</code></pre>
+</div>
+
+<p><a href="https://github.com/duckinator">Nik Markwell</a> has a neat implementation of a saner, more <a href="https://gist.github.com/duckinator/d08df4d312139a447738">constrained</a> version of this, which ends up looking like</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="n">as</span> <span class="n">long</span> <span class="n">as</span> <span class="o">-&gt;</span> <span class="p">{</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span> <span class="p">},</span> <span class="o">-&gt;</span> <span class="p">{</span> <span class="nb">puts</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span> <span class="p">}</span>
+</code></pre>
+</div>
+
+<p>However, being practical and sane isn’t the Canadian way. If it were, most Canadians wouldn’t live in a place where 11 months of the year the air hurts your face. We don’t stand for useful applications of bare functions, and nor should you.</p>
+
+<h2 id="next-on-our-agenda">Next on our agenda</h2>
+<p>Convincing the W3C that the California Style Sheets spelling of ‘colour’ and ‘grey’ is the only appropriate one. Do not lose faith, Canadians. Now that the rest of the world has accepted curling as a sport, they’re ready to accept anything.</p>
+
+</section>
+
+
+    <section class="content">
+      <div class="footer">
+        <section class="thanks">
+          <span>thanks for reading!</span>
+        </section>
+        <section class="twitter">
+                <a href="https://twitter.com/share" class="twitter-share-button" data-via="rambleraptor" title="Tweet at me!" aria-label="Tweet at me!">Tweet</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        </section>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <title>
+    Presentation slides and writer's block &ndash; Alex Stephen
+  </title>
+
+  <!-- Begin Jekyll SEO tag v2.1.0 -->
+<meta property="og:title" content="Presentation slides and writer’s block" />
+<meta name="description" content="I am the poster child for writer’s block. I can’t write the #ifdef header guard correctly for a brand new C++ class, I don’t remember the order of the public static void main args incantation in Java, and for the life of me, I can’t start working on an empty presentation. Not even if you promise me pizza. (Please promise me pizza though.)" />
+<meta property="og:description" content="I am the poster child for writer’s block. I can’t write the #ifdef header guard correctly for a brand new C++ class, I don’t remember the order of the public static void main args incantation in Java, and for the life of me, I can’t start working on an empty presentation. Not even if you promise me pizza. (Please promise me pizza though.)" />
+<link rel="canonical" href="http://localhost:4000/posts/slides-writers-block/" />
+<meta property="og:url" content="http://localhost:4000/posts/slides-writers-block/" />
+<meta property="og:site_name" content="Alex Stephen" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2014-04-09T00:00:00-07:00" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@rambleraptor" />
+<meta name="twitter:creator" content="@rambleraptor" />
+<script type="application/ld+json">
+{"@context": "http://schema.org",
+"@type": "BlogPosting",
+"headline": "Presentation slides and writer’s block",
+"datePublished": "2014-04-09T00:00:00-07:00",
+"description": "I am the poster child for writer’s block. I can’t write the #ifdef header guard correctly for a brand new C++ class, I don’t remember the order of the public static void main args incantation in Java, and for the life of me, I can’t start working on an empty presentation. Not even if you promise me pizza. (Please promise me pizza though.)",
+"url": "http://localhost:4000/posts/slides-writers-block/"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <link rel="alternate" type="application/rss+xml" href="/atom.xml" />
+
+  <link rel="stylesheet" href="/css/base.css" type="text/css" media="screen, projection" />
+  <link rel="stylesheet" href="/css/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="/css/mobile.css" type="text/css" media="screen, projection" />
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.png" />
+  <link rel="icon" type="image/png"  href="/images/favicon.png">
+
+  <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-47334320-2']);
+    _gaq.push(['_setDomainName', 'http://localhost:4000']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+</head>
+<body>
+  <div class="top-line"></div>
+  <div class="container">
+    <header class="sidebar">
+    <a href="/"><h1 class="avatar">Alex's Rambles</h1></a>
+
+      <div class="sidebar-text">
+        <section class="meta">
+          <a href="https://github.com/rambleraptor" target="_blank" title="Peep at my GitHub" aria-label="Peep at my GitHub">
+            <svg viewBox="0 0 18 18" style="display: inline-block; width: 16px; height: 16px;"><g><path d="M8 0C3.58 0 0 3.582 0 8c0 3.535 2.292 6.533 5.47 7.59.4.075.547-.172.547-.385 0-.19-.007-.693-.01-1.36-2.226.483-2.695-1.073-2.695-1.073-.364-.924-.89-1.17-.89-1.17-.725-.496.056-.486.056-.486.803.056 1.225.824 1.225.824.714 1.223 1.873.87 2.33.665.072-.517.278-.87.507-1.07-1.777-.2-3.644-.888-3.644-3.953 0-.873.31-1.587.823-2.147-.083-.202-.358-1.015.077-2.117 0 0 .672-.215 2.2.82.638-.178 1.323-.266 2.003-.27.68.004 1.364.092 2.003.27 1.527-1.035 2.198-.82 2.198-.82.437 1.102.163 1.915.08 2.117.513.56.823 1.274.823 2.147 0 3.073-1.87 3.75-3.653 3.947.287.246.543.735.543 1.48 0 1.07-.01 1.933-.01 2.195 0 .215.144.463.55.385C13.71 14.53 16 11.534 16 8c0-4.418-3.582-8-8-8"></path></g></svg>
+          </a>
+          <a href="https://twitter.com/rambleraptor" target="_blank" title="Follow me on twitter" aria-label="Follow me on Twitter">
+            <svg viewBox="0 0 18 18" style="display: inline-block; width: 16px; height: 16px;"><g><path d="M16 3.038c-.59.26-1.22.437-1.885.517.677-.407 1.198-1.05 1.443-1.816-.634.375-1.337.648-2.085.795-.598-.638-1.45-1.036-2.396-1.036-1.812 0-3.282 1.468-3.282 3.28 0 .258.03.51.085.75C5.152 5.39 2.733 4.084 1.114 2.1.83 2.583.67 3.147.67 3.75c0 1.14.58 2.143 1.46 2.732-.538-.017-1.045-.165-1.487-.41v.04c0 1.59 1.13 2.918 2.633 3.22-.276.074-.566.114-.865.114-.21 0-.416-.02-.617-.058.418 1.304 1.63 2.253 3.067 2.28-1.124.88-2.54 1.404-4.077 1.404-.265 0-.526-.015-.783-.045 1.453.93 3.178 1.474 5.032 1.474 6.038 0 9.34-5 9.34-9.338 0-.143-.004-.284-.01-.425.64-.463 1.198-1.04 1.638-1.7z" fill-rule="nonzero"></path></g></svg>
+          </a>
+          <a href="/atom.xml" title="Atom RSS feed" aria-label="Atom RSS feed" class="og">📝</a>
+        </section>
+
+        <nav class="sections">
+          <ul>
+            <li><a href="/about">about</a></li>
+            <li><a href="/">posts</a></li>
+            
+              
+              <li><a href="/life">life</a></li>
+            
+              
+              <li><a href="/tech">tech</a></li>
+            
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- <link rel="stylesheet" href="/css/scroller.css" type="text/css" media="screen, projection"/> -->
+<section class="content">
+  <h1>
+    <a href="/posts/slides-writers-block/">Presentation slides and writer's block</a>
+  </h1>
+
+  <section class="byline">
+    April  9, 2014 ⚬ 
+  </section>
+
+  <p>I am the poster child for writer’s block. I can’t write the <code class="highlighter-rouge">#ifdef</code> header guard correctly for a brand new C++ class, I don’t remember the order of the <code class="highlighter-rouge">public static void main args</code> incantation in Java, and for the life of me, I can’t start working on an empty presentation. Not even if you promise me pizza. (Please promise me pizza though.)</p>
+
+<h2 id="start-with-an-outline">Start with an outline</h2>
+<p>There’s already an amazing <a href="http://speaking.io/plan/an-outline/">speaking.io post</a> about writing outlines which you should read. The tl;dr is that you start with the top-level things that you want to talk about (feel free to <code class="highlighter-rouge">s/2Pac/Biggie/g</code> in that example if a) you have good taste or b) you’re from the East Coast because c) yolo), and then slowly, but with gumption, start developing dem ideas.</p>
+
+<p>I personally take that post literally and write my outline as a markdown gist. The top-level ideas are ## headers, the supporting points are sub-bullets, and there’s a lot of “???. Profit!” and notes to future-Monica, because present-Monica is usually a jerk.</p>
+
+<h2 id="time-to-procrastinate">Time to procrastinate</h2>
+<p>This is great! You have an outline! You deserve a break. No, really; take a break.</p>
+
+<p>I let this baby stew for a couple of days, so that it gets nice and tender. Nobody likes an undercooked outline. It’s also not a terrible idea at this point to ask some of your friends to read your outline and tell you if this would be a talk they wouldn’t hate listening to.</p>
+
+<h2 id="time-for-skeletor">Time for Skeletor™</h2>
+<p>Once you think you’ve procrastinated enough and it’s time to actually work on your presentation, you’ll be tempted to start thinking about slide design, typefaces, and the kind of cat gifs you’ll include for bonus points.</p>
+
+<p>Don’t.</p>
+
+<p>I mean, definitely include cat gifs, but that time isn’t now. I’m pretty sure “being OCD about typography” is correlated with “being really good at writer’s block”, so I can promise that you’ll waste many evenings choosing drop shadows before you realize how screwed you are for content.</p>
+
+<p>I’ve sorted this out by having a <em>really</em> basic presentation <a href="/includes/skeletor.pdf">template</a>, affectionately named Skeletor, that I only use when I work on the content. It’s got a font that doesn’t make me angry, a really basic colour scheme, and I can distinguish between title and filler slides.</p>
+
+<script async="" class="speakerdeck-embed" data-id="37416630a2e901311a744eb53c3a6292" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+
+<p>Then, I dump the stewed outline into this presentation – the titles, the bullets, the question marks – and do a dry-run. So that the rehearsal is actually useful, you should probably make sure your (entirely empty) presenter’s notes are visible and editable. If you don’t use presenter’s notes, I don’t even know how you exist. Get some paper.</p>
+
+<h2 id="the-forced-rehearsal">The forced rehearsal</h2>
+<p>“But Monica”, you’ll say, “you barely have any content, what are you even rehearsing?”. And my answer to that is: don’t start sentences with “but”. Also, it turns out that even if you haven’t thought about it before, when you have to start speaking about a slide that says “2Pac &lt;3s the Bay Area”, your first instinct will be to panic and explain why that’s true. There’s the content! You’ll make up some facts, some funnies, some things you should have researched but didn’t because you probably watched House of Cards instead, and you will promptly type these out in your presenter’s notes. Then go back, change your slides/notes, and rehearse again. Bingo-bango, sugar in the gas tank, you’re pretty much done.</p>
+
+<p>Guess who has a non-empty presentation now, with slides and content? GUESS. (Hint: it’s you).</p>
+
+<p>Now go fix them fonts.</p>
+
+<h3 id="-ヾﾉ-">♬♪♫ ヾ(*・。・)ﾉ ♬♪♫</h3>
+
+</section>
+
+
+    <section class="content">
+      <div class="footer">
+        <section class="thanks">
+          <span>thanks for reading!</span>
+        </section>
+        <section class="twitter">
+                <a href="https://twitter.com/share" class="twitter-share-button" data-via="rambleraptor" title="Tweet at me!" aria-label="Tweet at me!">Tweet</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        </section>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

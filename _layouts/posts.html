@@ -1,0 +1,42 @@
+---
+layout: layout
+---
+<section class="content">
+  <ul class="listing">
+    {% if page.list %}
+
+    {% for post in site.posts %}
+    {% unless post.draft %}
+      {% if post.tags contains page.list %}
+        {% capture currentdate %}{{post.date | date: "%Y"}}{% endcapture %}
+        {% if currentdate != thedate %}
+          <h3>{{ currentdate }}</h3>
+          {% capture thedate %}{{currentdate}}{% endcapture %}
+        {% endif %}
+        <li>
+          <span>{{ post.date | date: "%B %e, %Y" }}</span> <a href="{{ post.url }}">{{ post.title }}</a>
+        </li>
+    {% endif %}
+    {% endunless %}
+    {% endfor %}
+
+    {% else %}
+
+    {% for post in site.posts %}
+    {% unless post.draft %}
+        {% capture currentdate %}{{post.date | date: "%Y"}}{% endcapture %}
+        {% if currentdate != thedate %}
+          <h3>{{ currentdate }}</h3>
+          {% capture thedate %}{{currentdate}}{% endcapture %}
+        {% endif %}
+        <li>
+          <span>{{ post.date | date: "%B %e, %Y" }}</span> <a href="{{ post.url }}">{{ post.title }}</a>
+        </li>
+    {% endunless %}
+    {% endfor %}
+
+    {% endif %}
+  </ul>
+  
+  <br/><br/>
+</section>

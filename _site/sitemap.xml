@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>http://localhost:4000</loc>
+    </url>
+
+    
+    
+    <url>
+        <loc>http://localhost:4000/posts/2016-in-review/</loc>
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/posts/og-emoji-font/</loc>
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/posts/how-i-fixed-headphones/</loc>
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/posts/a-year-in-review/</loc>
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/posts/a-story-about-input/</loc>
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/posts/styling-the-dome/</loc>
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/posts/keypress-is-bananas/</loc>
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/posts/chromium-owners/</loc>
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/posts/chromium-101/</loc>
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/posts/cat-dns-cascadia/</loc>
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/posts/unscary-lldb/</loc>
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/posts/presenter-notes-that-dont-suck/</loc>
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/posts/static-initializers/</loc>
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/posts/slides-writers-block/</loc>
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/posts/code-reviews/</loc>
+    </url>
+    
+    
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/posts/tricky-pull-requests/</loc>
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/posts/ruby-eh/</loc>
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/posts/go-cat-dns-go/</loc>
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/posts/dear-sir-or-madam/</loc>
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/posts/oops-cat-dns/</loc>
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/posts/cocoa-gems/</loc>
+    </url>
+    
+    
+</urlset>

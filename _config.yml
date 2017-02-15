@@ -1,32 +1,15 @@
-# Dependencies
-markdown:         redcarpet
-highlighter:      pygments
+# Jekyll General
+permalink: /posts/:title/
+name: Alex Stephen
+url: https://rambleraptor.github.io
+description: It's a blog!
+future: true
+google_analytics_tracking_id: UA-47334320-2
+gems:
+  - jekyll-seo-tag
 
-# Permalinks
-permalink:        pretty
-
-# Setup
-title:            Alex Stephen
-tagline:          My blog
-description:      Technology and life from Alex Stephen
-url:              http://alexstephen.me
-
+# SEO Social
+twitter:
+  username: rambleraptor
 author:
-  name:           Alex Stephen
-  url:            https://alexstephen.me
-
-paginate:         3
-
-# Custom vars
-version:          1.0.0
-
-github:
-  repo:           https://www.github.com/astephen2/astephen2.github.io
-
-post:
-  template:       _post_template.md
-  extension:      markdown 
-
-sass:
-  sass_dir: _sass
-  style: compressed
+  twitter: rambleraptor
