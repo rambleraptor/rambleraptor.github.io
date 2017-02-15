@@ -4,6 +4,8 @@ GEM
     addressable (2.5.0)
       public_suffix (~> 2.0, >= 2.0.2)
     colorator (1.1.0)
+    fastimage (1.6.8)
+      addressable (~> 2.3, >= 2.3.5)
     ffi (1.9.17)
     forwardable-extended (2.6.0)
     jekyll (3.4.0)
@@ -17,6 +19,10 @@ GEM
       pathutil (~> 0.9)
       rouge (~> 1.7)
       safe_yaml (~> 1.0)
+    jekyll-picture-tag (0.3.0)
+      fastimage (~> 1.6.4)
+      jekyll (< 4)
+      mini_magick (~> 3.8.0)
     jekyll-sass-converter (1.5.0)
       sass (~> 3.4)
     jekyll-seo-tag (2.1.0)
@@ -29,6 +35,8 @@ GEM
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
     mercenary (0.3.6)
+    mini_magick (3.8.1)
+      subexec (~> 0.2.1)
     pathutil (0.14.0)
       forwardable-extended (~> 2.6)
     public_suffix (2.0.5)
@@ -38,12 +46,14 @@ GEM
     rouge (1.11.1)
     safe_yaml (1.0.4)
     sass (3.4.23)
+    subexec (0.2.3)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
   jekyll!
+  jekyll-picture-tag!
   jekyll-seo-tag!
 
 BUNDLED WITH
