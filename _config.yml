@@ -1,10 +1,10 @@
 # Jekyll General
 permalink: /posts/:title/
 name: Alex Stephen
-url: https://rambleraptor.github.io
+url: https://www.alexstephen.me
 description: It's a blog!
 future: true
-google_analytics_tracking_id: UA-47334320-2
+google_analytics_tracking_id: 
 gems:
   - jekyll-seo-tag
 
