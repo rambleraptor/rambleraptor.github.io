@@ -1,7 +1,7 @@
 # Jekyll General
 permalink: /posts/:title/
 name: Alex Stephen
-url: https://www.alexstephen.me
+url: http://www.alexstephen.me
 description: It's a blog!
 future: true
 google_analytics_tracking_id: UA-38317192-1
