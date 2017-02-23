@@ -1,0 +1,20 @@
+---
+layout: post
+title: It's another blog I'll never update
+date: February 15, 2017
+tags:
+  - life
+---
+I swear, this is like the fourth or fifth blog I've ever made. 
+
+Every six months or so, I look on Facebook, see a friend self-promoting their blog and think "that sounds fun!" I love to rant in long, unweidly paragraphs and now I have a forum where nobody can tell me to shut up. 
+
+And then, a couple days later, I decide that I have to design this blog from scratch because I'm a software engineer. So, I brake out all of the trendiest CSS nonsense and laugh at the state of Javascript development. Way too long afterwards, I have a very poorly designed website that repulses me.
+
+I write my first article (which looks a lot like this!), post it, and then promptly go back to forgetting all about blogging.
+
+I'm really determined to fix my cycle of neglect this time around. I borrowed a blog design instead of forging my own in the binary mines. I'm not going to obsess about how the menu looks a little off on mobile. Nor am I going to go through more than ~~ten~~ fifteen shades of blue. I'm done. 
+
+I'm not solely going to be one of those techies talking about Javascript this and container that. I'm going to write some tech, but also just talk about life. Check it out!
+
+That is, until I promptly forget about this blog again.

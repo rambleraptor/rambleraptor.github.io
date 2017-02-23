@@ -2,9 +2,11 @@
 layout: layout
 ---
 <section class="content">
+  {% if page.title %}
+  <h1 class="section-title">{{page.title}}</h1>
+  {% endif %}
   <ul class="listing">
     {% if page.list %}
-
     {% for post in site.posts %}
     {% unless post.draft %}
       {% if post.tags contains page.list %}

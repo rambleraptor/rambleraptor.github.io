@@ -5,4 +5,28 @@
     </url>
 
     
+    
+    <url>
+        <loc>http://localhost:4000/posts/reboot/</loc>
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/posts/guatemala/</loc>
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/posts/doctors/</loc>
+    </url>
+    
+    
+    
+    <url>
+        <loc>http://localhost:4000/posts/hackathons_good/</loc>
+    </url>
+    
+    
 </urlset>
