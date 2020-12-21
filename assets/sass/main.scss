@@ -1,0 +1,38 @@
+$enable-gradients: true;
+$enable-shadows: true;
+
+$body-color: black;
+$body-bg: white;
+$border-radius: .4rem;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 700px,
+  lg: 700px,
+  xl: 700px,
+  xxl: 700px
+);
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import "../../node_modules/bootstrap//scss/bootstrap";
+
+body {
+  padding: 3rem;
+  font-family: "Source Sans Pro", sans-serif;
+
+  border-top: 8px solid #2176AE;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 900;
+
+  margin-top: 0;
+  margin-bottom: 48px;
+}
+
+p {
+  font-size: 20px;
+  margin: 0 0 1.5rem;
+  line-height: 1.5;
+}
