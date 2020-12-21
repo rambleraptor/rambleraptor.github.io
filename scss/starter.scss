@@ -19,7 +19,7 @@ $enable-gradients: true;
 $enable-shadows: true;
 
 // Customize some defaults
-$body-color: purple;
+$body-color: black;
 $body-bg: white;
 $border-radius: .4rem;
 
@@ -94,6 +94,8 @@ $container-max-widths: (
 body {
   padding: 3rem;
   font-family: "Source Sans Pro", sans-serif;
+
+  border-top: 8px solid #2176AE;
 }
 
 h1 {
@@ -101,6 +103,7 @@ h1 {
   font-weight: 900;
 
   margin-top: 0;
+  margin-bottom: 48px;
 }
 
 p {
