@@ -3,6 +3,8 @@ title: Alex Stephen
 date: 2020-12-20
 ---
 
+![Image of me](/me.jpg)
+
 # Hi! I'm Alex!
 
 I'm a software engineer and all-around millennial from the Mitten, currently in Seattle.
