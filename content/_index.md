@@ -3,7 +3,7 @@ title: Alex Stephen
 date: 2020-12-20
 ---
 
-![Image of me](/me.jpg)
+<img src="/me.jpg" class="img-fluid" alt="Image of me">
 
 # Hi! I'm Alex!
 

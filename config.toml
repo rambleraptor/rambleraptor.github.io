@@ -1,3 +1,6 @@
 baseURL = "https://alexstephen.me/"
 languageCode = "en-us"
 title = "Alex Stephen's Site"
+
+[markup.goldmark.renderer]
+unsafe= true
