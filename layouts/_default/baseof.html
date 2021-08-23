@@ -17,6 +17,10 @@
   <body>
     <div class="border-solid border-8 border-blue-500"></div>
     <div class="container mx-auto prose prose-lg pt-10">
+        <nav>
+          <a href="/">Home</a>
+          <a href="/posts">Posts</a>
+        </nav>
         {{ block "main" . }}{{ end }}
     </div>
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
