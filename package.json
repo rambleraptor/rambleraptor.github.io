@@ -2,20 +2,19 @@
   "name": "personal_website",
   "version": "1.0.0",
   "description": "My personal website",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rambleraptor/rambleraptor.github.io.git"
-  },
-  "author": "",
+  "repository": "git+https://github.com/rambleraptor/rambleraptor.github.io.git",
+  "author": "Alex Stephen <astephen2@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/rambleraptor/rambleraptor.github.io/issues"
   },
   "homepage": "https://github.com/rambleraptor/rambleraptor.github.io#readme",
   "dependencies": {
-    "bootstrap": "^4.5.3"
+    "@tailwindcss/typography": "^0.4.1",
+    "autoprefixer": "^10.3.2",
+    "bootstrap": "^4.5.3",
+    "postcss": "^8.3.6",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.2.7"
   }
 }
