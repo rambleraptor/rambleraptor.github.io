@@ -3,14 +3,21 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    {{ $style := resources.Get "sass/main.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{ $style.Permalink }}">
+
+    {{ $styles := resources.Get "css/main.css" | postCSS }}
+    {{ if .Site.IsServer }}
+      <link rel="stylesheet" href="{{ $styles.RelPermalink }}"/>
+    {{ else }}
+      {{ $styles := $styles | minify | fingerprint | resources.PostProcess }}
+      <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}"/>
+    {{ end }}
+
     <title>{{.Title}}</title>
   </head>
   <body>
-    <div class="container-sm">
-      {{.Content}}
+    <div class="border-solid border-8 border-blue-500"></div>
+    <div class="container mx-auto prose prose-lg pt-10">
+        {{.Content}}
     </div>
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script type="module" src="assets/js/starter.js"></script>
