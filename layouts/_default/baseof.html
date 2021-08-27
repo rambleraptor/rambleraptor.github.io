@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{ template "_internal/google_analytics_async.html" . }}
 
     {{ $styles := resources.Get "css/main.css" | postCSS }}
     {{ if .Site.IsServer }}
