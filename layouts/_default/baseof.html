@@ -17,13 +17,11 @@
   </head>
   <body>
     <div class="border-solid border-8 border-blue-500"></div>
-    <div class="container mx-auto pt-5 pl-3">
-        <nav class="mb-5">
-          <a class="mr-2 text-purple-600 font-semibold" href="/">Alex Stephen</a>
-          <a class="mr-2 font-light text-gray-300">|</a>
-          <a class="mr-2 text-purple-600 font-semibold" href="/posts">Posts</a>
-        </nav>
-    </div>
+    <nav class="container mx-auto pt-5 pl-3 mb-5 prose prose-lg">
+      <a class="mr-2 text-purple-600 font-semibold" href="/">Alex Stephen</a>
+      <a class="mr-2 font-light text-gray-300">|</a>
+      <a class="mr-2 text-purple-600 font-semibold" href="/posts">Posts</a>
+    </nav>
     <div class="container mx-auto prose prose-lg pl-3 pr-3 pb-10">
         {{ block "main" . }}{{ end }}
     </div>
