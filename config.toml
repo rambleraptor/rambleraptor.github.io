@@ -1,6 +1,9 @@
 baseURL = "https://alexstephen.me/"
 languageCode = "en-us"
 title = "Alex Stephen's Site"
+googleAnalytics = 'UA-38317192-1'
 
 [markup.goldmark.renderer]
 unsafe= true
+
+
