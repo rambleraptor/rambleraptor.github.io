@@ -18,13 +18,18 @@
   <body>
     <div class="border-solid border-8 border-blue-500"></div>
     <div class="container mx-auto prose prose-lg pl-3 pr-3 pb-10">
-      <nav class="pt-5 pb-2 prose-indigo">
-        <a class="mr-2 text-purple-600 font-semibold" href="/">Alex Stephen</a>
+      <nav class="pt-5 pb-2 mb-5 prose-indigo">
+        <a class="mr-2 text-purple-600 font-semibold !no-underline" href="/">Alex Stephen</a>
         <a class="mr-2 font-light text-indigo-300">|</a>
-        <a class="mr-2 text-purple-600 font-semibold" href="/posts">Posts</a>
+        <a class="mr-2 text-purple-600 font-semibold !no-underline" href="/posts">Posts</a>
       </nav>
       <div>
           {{ block "main" . }}{{ end }}
+      </div>
+      <div class="flex flex-row">
+        <a href="https://www.twitter.com/rambleraptor"><img class="w-6 mr-4" src="/twitter.svg"></a>
+        <a href="https://www.github.com/rambleraptor"><img class="w-6 mr-4" src="/github.svg" height="20"></a>
+        <a href="https://www.letterboxd.com/rambleraptor"><img class="w-6 mr-4" src="/letterboxd.svg" height="20"></a>
       </div>
     </div>
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
