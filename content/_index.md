@@ -3,7 +3,7 @@ title: Alex Stephen
 date: 2020-12-20
 ---
 
-<img src="/me.jpg" class="img-fluid" alt="Image of me">
+<img src="/me.jpg" class="img-fluid hero-image" alt="Image of me">
 
 # Hi! I'm Alex!
 
