@@ -1,9 +1,0 @@
-{{ define "main" }}
-
-<h1>{{ .Title }}</h1>
-{{.Content}}
-{{ range .Pages.ByPublishDate.Reverse }}
-  <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-  <p>{{ .Summary }}</p>
-  <p class="text-sm">{{.Date | time.Format ":date_long" }}</p>
-{{ end }} {{ end }}
