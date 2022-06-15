@@ -1,4 +1,11 @@
 talks:
+  - year: 2019
+    conferences:
+      - title: Google Cloud's Journey to Ansible Collections
+        conference: AnsibleFest 2019
+        video: https://www.ansible.com/google-clouds-journey-to-ansible-collections
+      - title: Kohl's quickly moves to GCP with the help of OpenShift and Ansible
+        conference: Red Hat Summit 2019
   - year: 2018
     conferences:
     - title: Make Ruby Write Your Code For You
@@ -13,10 +20,3 @@ talks:
     - title: Puppet + GCP
       conference: Puppetize Live 2018
       video: https://puppet.com/blog/highlighting-google-clouds-talks-puppetize-live/
-  - year: 2019
-    conferences:
-      - title: Google Cloud's Journey to Ansible Collections
-        conference: AnsibleFest 2019
-        video: https://www.ansible.com/google-clouds-journey-to-ansible-collections
-      - title: Kohl's quickly moves to GCP with the help of OpenShift and Ansible
-        conference: Red Hat Summit 2019
