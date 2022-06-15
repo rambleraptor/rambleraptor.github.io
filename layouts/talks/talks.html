@@ -1,0 +1,18 @@
+{{ define "main" }}
+{{.Content}}
+
+{{ range .Site.Data.talks.talks }}
+<section>
+  <h3 class="font-medium leading-tight text-5xl mt-0 mb-2 prose-indigo">{{.year}}</h3>
+  <ul class="prose-ul:list-none">
+  {{ range .conferences }}
+    <li>
+      <a href="{{ .video }}">{{ .title }}</a>
+      <br />
+      {{ .conference }}
+    </li>
+  {{ end }}
+  </ul>
+</section>
+{{ end }}
+{{ end }}

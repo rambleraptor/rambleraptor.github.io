@@ -1,4 +1,14 @@
 talks:
-  - title: Make Ruby Write Your Code For You
-    conference: RubyConf 2018
-    video: https://www.youtube.com/watch?v=Ly7lbd7myHU
+  - year: 2018
+    conferences:
+    - title: Make Ruby Write Your Code For You
+      conference: RubyConf 2018
+      video: https://www.youtube.com/watch?v=Ly7lbd7myHU
+    - title: Chef + Google Kubernetes Engine
+      conference: ChefConf 2018
+      video: https://www.youtube.com/watch?v=5MQr0gE6b7U
+  - year: 2019
+    conferences:
+      - title: Google Cloud's Journey to Ansible Collections
+        conference: AnsibleFest 2019
+        video: https://www.ansible.com/google-clouds-journey-to-ansible-collections
