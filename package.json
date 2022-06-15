@@ -10,11 +10,11 @@
   },
   "homepage": "https://github.com/rambleraptor/rambleraptor.github.io#readme",
   "dependencies": {
-    "@tailwindcss/typography": "^0.4.1",
+    "@tailwindcss/typography": "^0.5.2",
     "autoprefixer": "^10.3.2",
     "bootstrap": "^4.5.3",
     "postcss": "^8.3.6",
     "postcss-cli": "^8.3.1",
-    "tailwindcss": "^2.2.7"
+    "tailwindcss": "^3.1.3"
   }
 }

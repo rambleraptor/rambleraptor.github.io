@@ -1,10 +1,10 @@
 {{ define "main" }}
 {{.Content}}
 
-{{ range .Site.Data.talks.talks }}
-<section>
+{{ range sort .Site.Data.talks.talks "desc" }}
+<section class="prose-ul:list-none">
   <h3 class="font-medium leading-tight text-5xl mt-0 mb-2 prose-indigo">{{.year}}</h3>
-  <ul class="prose-ul:list-none">
+  <ul>
   {{ range .conferences }}
     <li>
       <a href="{{ .video }}">{{ .title }}</a>
