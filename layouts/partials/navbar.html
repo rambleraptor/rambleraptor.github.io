@@ -1,7 +1,7 @@
-<nav class="pt-5 pb-2 mb-5 prose-indigo">
-  <a class="mr-2 text-purple-600 font-semibold !no-underline" href="/">Alex Stephen</a>
+<nav class="mx-auto pt-5 pb-5 container prose prose-lg pl-3 prose-indigo prose-a:font-light">
+  <a class="mr-2" href="/">Alex Stephen</a>
   {{ range $.Site.Sections }}
-    <a class="mr-2 font-light text-indigo-300">|</a>
-    <a class="mr-2 text-purple-600 font-semibold !no-underline" href="{{.Permalink}}">{{.Name}}</a>
+    <a class="mr-2">|</a>
+    <a class="mr-2" href="{{.Permalink}}">{{.Name}}</a>
   {{ end }}
 </nav>

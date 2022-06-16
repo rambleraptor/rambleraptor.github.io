@@ -2,10 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-nav a:link {
-    text-decoration: none;
-}
+/* Tailwind is really hard to use, so I have to do this. */
 
 .hero-image {
     margin-top: 0 !important;
+}
+
+
+nav a:link {
+    text-decoration: none;
+    font-weight: 300;
 }
