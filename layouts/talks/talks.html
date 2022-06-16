@@ -3,7 +3,7 @@
 
 {{ range sort .Site.Data.talks.talks "desc" }}
 <section class="prose-ul:list-none">
-  <h3 class="font-medium leading-tight text-5xl mt-0 mb-2 prose-indigo">{{.year}}</h3>
+  <h3 class="prose-indigo">{{.year}}</h3>
   <ul>
   {{ range .conferences }}
     <li>

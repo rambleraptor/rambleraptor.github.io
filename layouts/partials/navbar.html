@@ -1,5 +1,7 @@
 <nav class="pt-5 pb-2 mb-5 prose-indigo">
   <a class="mr-2 text-purple-600 font-semibold !no-underline" href="/">Alex Stephen</a>
-  <a class="mr-2 font-light text-indigo-300">|</a>
-  <a class="mr-2 text-purple-600 font-semibold !no-underline" href="/talks">Talks</a>
+  {{ range $.Site.Sections }}
+    <a class="mr-2 font-light text-indigo-300">|</a>
+    <a class="mr-2 text-purple-600 font-semibold !no-underline" href="{{.Permalink}}">{{.Name}}</a>
+  {{ end }}
 </nav>
