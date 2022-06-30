@@ -1,15 +1,8 @@
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  {{ template "_internal/google_analytics_async.html" . }}
-
-  {{ $styles := resources.Get "css/main.css" | postCSS }}
-  {{ if .Site.IsServer }}
-    <link rel="stylesheet" href="{{ $styles.RelPermalink }}"/>
-  {{ else }}
-    {{ $styles := $styles | minify | fingerprint | resources.PostProcess }}
-    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
-  {{ end }}
-
-  <title>{{.Title}}</title>
+  {{ block "head/analytics" . }}{{ partial "head/analytics.html" . }}{{ end }}
+  {{ block "head/stylesheet" . }}{{ partial "head/stylesheet.html" . }}{{ end }}
+  {{ block "head/seo" . }}{{ partial "head/seo.html" . }}{{ end }}
 </head>
