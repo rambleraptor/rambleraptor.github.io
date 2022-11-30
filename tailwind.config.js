@@ -1,11 +1,11 @@
 module.exports = {
   content: ["layouts/**/*.html"],
-  darkMode: 'media', // or 'media' or 'class'
+  darkMode: "media", // or 'media' or 'class'
   theme: {
     extend: {},
   },
   variants: {
     extend: {},
   },
-  plugins: [require('@tailwindcss/typography')]
-}
+  plugins: [require("@tailwindcss/typography")],
+};
