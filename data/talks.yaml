@@ -8,15 +8,15 @@ talks:
         conference: Red Hat Summit 2019
   - year: 2018
     conferences:
-    - title: Make Ruby Write Your Code For You
-      conference: RubyConf 2018
-      video: https://www.youtube.com/watch?v=Ly7lbd7myHU
-    - title: Chef + Google Kubernetes Engine
-      conference: ChefConf 2018
-      video: https://www.youtube.com/watch?v=5MQr0gE6b7U
-    - title: Auto-generating Google Cloud Ansible Modules
-      conference: AnsibleFest 2018
-      video: https://www.ansible.com/auto-generating-google-cloud-ansible-modules
-    - title: Puppet + GCP
-      conference: Puppetize Live 2018
-      video: https://puppet.com/blog/highlighting-google-clouds-talks-puppetize-live/
+      - title: Make Ruby Write Your Code For You
+        conference: RubyConf 2018
+        video: https://www.youtube.com/watch?v=Ly7lbd7myHU
+      - title: Chef + Google Kubernetes Engine
+        conference: ChefConf 2018
+        video: https://www.youtube.com/watch?v=5MQr0gE6b7U
+      - title: Auto-generating Google Cloud Ansible Modules
+        conference: AnsibleFest 2018
+        video: https://www.ansible.com/auto-generating-google-cloud-ansible-modules
+      - title: Puppet + GCP
+        conference: Puppetize Live 2018
+        video: https://puppet.com/blog/highlighting-google-clouds-talks-puppetize-live/

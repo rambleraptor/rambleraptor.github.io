@@ -1,7 +1,9 @@
-<nav class="mx-auto pt-5 pb-5 container prose prose-lg pl-3 prose-indigo prose-a:font-light">
+<nav
+  class="container prose prose-lg prose-indigo mx-auto pt-5 pb-5 pl-3 prose-a:font-light"
+>
   <a class="mr-2" href="/">Alex Stephen</a>
   {{ range $.Site.Sections }}
-    <a class="mr-2">|</a>
-    <a class="mr-2" href="{{.Permalink}}">{{.Name}}</a>
+  <a class="mr-2">|</a>
+  <a class="mr-2" href="{{.Permalink}}">{{.Name}}</a>
   {{ end }}
 </nav>

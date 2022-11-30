@@ -1,18 +1,14 @@
-{{ define "main" }}
-{{.Content}}
-
-{{ range sort .Site.Data.talks.talks "desc" }}
+{{ define "main" }} {{.Content}} {{ range sort .Site.Data.talks.talks "desc" }}
 <section class="prose-ul:list-none">
   <h3 class="prose-indigo">{{.year}}</h3>
   <ul>
-  {{ range .conferences }}
+    {{ range .conferences }}
     <li>
       <a href="{{ .video }}">{{ .title }}</a>
       <br />
       {{ .conference }}
     </li>
-  {{ end }}
+    {{ end }}
   </ul>
 </section>
-{{ end }}
-{{ end }}
+{{ end }} {{ end }}

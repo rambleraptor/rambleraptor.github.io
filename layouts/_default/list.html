@@ -2,14 +2,14 @@
 
 <h1>{{ .Title }}</h1>
 {{ .Content }}
-<hr>
+<hr />
 <section class="prose-ul:list-none">
-  {{ range .Pages.ByPublishDate.Reverse }}
-      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-      <br />
-      {{ .Date | time.Format ":date_long" }}
-  {{ end }}
-</ul>
+  <ul>
+    {{ range .Pages.ByPublishDate.Reverse }}
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    <br />
+    {{ .Date | time.Format ":date_long" }} {{ end }}
+  </ul>
 </section>
 
 {{ end }}

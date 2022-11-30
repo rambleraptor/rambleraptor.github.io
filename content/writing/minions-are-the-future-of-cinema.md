@@ -63,5 +63,3 @@ The same year Despicable Me 3 came out, The Last Jedi was released. While the mo
 And voila: another franchise had successfully followed the Scrat playbook to become an international sensation.
 
 At this point, the Minions playbook has proven itself throughout cinema. Where will it appear next? My money’s on the new Mario movie. When Illumation’s Mario movie comes out, it’s clear that at least one set of characters (Koopas? Toads? Goombas?) will follow the Minion playbook. The only question is, will audiences continue to respond to it?
-
-
