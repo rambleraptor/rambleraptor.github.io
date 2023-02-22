@@ -9,12 +9,12 @@ date: 2020-12-20
 
 I'm a software engineer and all-around millennial from the Mitten, currently in Seattle.
 
-Right now, I'm working at [Rippling](https://www.rippling.com) working on the Insurance team.
+Right now, I'm working at [Google](https://www.google.com) working on BigQuery!
 
 Before that, I was building declarative tools and code generators over at
-[Google](https://www.google.com), and data pipelines at
-[Palantir](https://www.palantir.com).
+[Google](https://www.google.com), data pipelines at
+[Palantir](https://www.palantir.com) and Insurance software at [Rippling](https://www.rippling.com).
 
-Before Palantir, I was at the [University of Michigan](https://www.umich.edu) (Go Blue!).
+Before Palantir, I went to the [University of Michigan](https://www.umich.edu) (Go Blue!).
 
 You can find me spewing nonsense over on the bird app [@rambleraptor](https://www.twitter.com/rambleraptor) and over on [GitHub](https://www.github.com/rambleraptor). Or you can always [email me](mailto:astephen2@gmail.com).
