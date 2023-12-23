@@ -2,14 +2,13 @@
 ---
 <!DOCTYPE html>
 <html lang="en">
-  {{ partial "head/head.html" . }}
+  <!-- TODO: Add header -->
   <body>
     <div class="border-8 border-solid border-blue-500"></div>
-    {{ partial "navbar.html" . }}
+  <!-- TODO: Add Navbar -->
     <div class="container prose prose-lg mx-auto pl-3 pr-3 pb-10">
-      <div>{{ block "main" . }}{{ end }}</div>
-      {{ partial "footer.html" . }}
+      <div><slot /></div>
+    <!-- TODO: Add footer -->
     </div>
-    <script type="module" src="assets/js/starter.js"></script>
   </body>
 </html>
