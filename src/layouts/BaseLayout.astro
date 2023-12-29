@@ -29,7 +29,6 @@ if(frontmatter != null) {
 
 <!doctype html>
 <html lang="en">
-  <!-- TODO: Add header -->
   <Head title={realTitle} description={realDescription} />
   <body>
     <div class="border-8 border-solid border-blue-500"></div>
@@ -40,3 +39,15 @@ if(frontmatter != null) {
     </div>
   </body>
 </html>
+
+<style>
+
+/* Tailwind is really hard to use, so I have to do this. */
+.hero-image {
+  margin-top: 0 !important;
+}
+
+.list {
+  padding-left: 0px;
+}
+</style>

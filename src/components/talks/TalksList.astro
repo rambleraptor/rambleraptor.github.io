@@ -1,0 +1,24 @@
+---
+import {TalkList, TalkYear, Conference} from "../../content/config"
+
+interface Props {
+    talks: TalkList
+}
+
+const {talks} = Astro.props;
+---
+{talks.years.map((year: TalkYear) => {
+
+    <section class="prose-ul:list-none">
+        <h3 class="prose-indigo">{year.year}</h3>
+        <ul>
+            {year.conferences.map((conference: Conference) => {
+                <li>
+                    <a href="{conference.video}">{ conference.title }</a>
+                    <br />
+                    {conference.name}
+                </li>
+            })}
+        </ul>
+    </section>
+})}
