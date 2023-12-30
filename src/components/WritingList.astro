@@ -8,7 +8,6 @@ const writingEntries = await getCollection('writing', ({ data }) => {
 
 <section>
   <ul class="list">
-    {console.log(writingEntries)}
     {writingEntries.map(entry => (
         <a href={`/writing/${entry.slug}`}>{entry.data.title}</a>
         <br />
@@ -18,3 +17,9 @@ const writingEntries = await getCollection('writing', ({ data }) => {
     ))}
   </ul>
 </section>
+
+<style>
+    .list {
+    padding-left: 0px;
+    }
+</style>
