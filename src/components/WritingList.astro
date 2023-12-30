@@ -1,0 +1,20 @@
+---
+import { getCollection } from 'astro:content';
+
+const writingEntries = await getCollection('writing', ({ data }) => {
+  return import.meta.env.PROD ? data.draft !== true : true;
+});
+---
+
+<section>
+  <ul class="list">
+    {console.log(writingEntries)}
+    {writingEntries.map(entry => (
+        <a href={`/writing/${entry.slug}`}>{entry.data.title}</a>
+        <br />
+        <time datetime={entry.data.date.toISOString()}>
+            {entry.data.date.toDateString()}
+        </time>
+    ))}
+  </ul>
+</section>

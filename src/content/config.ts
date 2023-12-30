@@ -1,22 +1,14 @@
-import { z } from "astro:content";
+import { z, defineCollection } from "astro:content";
 
-const ConferenceSchema  = z.object({
-    name: z.string(),
-    conference: z.string(),
-    video: z.optional(z.string()),
-});
-
-const TalkYearSchema = z.object({
-    year: z.number(),
-    conferences: z.array(ConferenceSchema)
+const writingCollection = defineCollection({
+    type: 'content',
+    schema: z.object({
+        title: z.string(),
+        date: z.date(),
+        draft: z.boolean(),
+    })
 })
 
-const TalkListSchema = z.object({
-    years: z.array(TalkYearSchema)
-})
-
-type TalkList = z.infer<typeof TalkListSchema>;
-type TalkYear = z.infer<typeof TalkYearSchema>;
-type Conference = z.infer<typeof ConferenceSchema>;
-
-export {TalkList, TalkYear, Conference}
+export const collections = {
+    'writing': writingCollection,
+}
