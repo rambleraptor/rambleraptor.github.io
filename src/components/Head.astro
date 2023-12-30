@@ -1,30 +1,32 @@
 ---
-import {SEO} from 'astro-seo';
+import { SEO } from "astro-seo";
 
 interface Props {
   title: string;
   description: string;
 }
 
-const {title, description} = Astro.props;
+const { title, description } = Astro.props;
 ---
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<SEO
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <SEO
     title={title}
     description={description}
     openGraph={{
       basic: {
-        title: {title},
+        title: { title },
         type: "A type.",
-        image: "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
-      }
+        image:
+          "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
+      },
     }}
     twitter={{
-      creator: "@rambleraptor"
+      creator: "@rambleraptor",
     }}
     extend={{
       // extending the default link tags
@@ -33,7 +35,8 @@ const {title, description} = Astro.props;
       meta: [
         {
           name: "twitter:image",
-          content: "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
+          content:
+            "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
         },
         { name: "twitter:title", content: "Tinker Tailor Soldier Spy" },
         { name: "twitter:description", content: "Agent" },
@@ -41,4 +44,3 @@ const {title, description} = Astro.props;
     }}
   />
 </head>
-  

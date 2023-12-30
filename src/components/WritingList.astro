@@ -1,25 +1,29 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection } from "astro:content";
 
-const writingEntries = await getCollection('writing', ({ data }) => {
+const writingEntries = await getCollection("writing", ({ data }) => {
   return import.meta.env.PROD ? data.draft !== true : true;
 });
 ---
 
 <section>
   <ul class="list">
-    {writingEntries.map(entry => (
-        <a href={`/writing/${entry.slug}`}>{entry.data.title}</a>
-        <br />
-        <time datetime={entry.data.date.toISOString()}>
+    {
+      writingEntries.map((entry) => (
+        <>
+          <a href={`/writing/${entry.slug}`}>{entry.data.title}</a>
+          <br />
+          <time datetime={entry.data.date.toISOString()}>
             {entry.data.date.toDateString()}
-        </time>
-    ))}
+          </time>
+        </>
+      ))
+    }
   </ul>
 </section>
 
 <style>
-    .list {
+  .list {
     padding-left: 0px;
-    }
+  }
 </style>

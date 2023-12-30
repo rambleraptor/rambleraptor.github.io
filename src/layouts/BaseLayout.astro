@@ -1,29 +1,29 @@
 ---
-import Head from '../components/Head.astro';
-import Navbar from '../components/Navbar.astro';
-import Footer from '../components/Footer.astro';
+import Head from "../components/Head.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
 
 interface Props {
-    title?: string
-    description?: string
-    frontmatter?: FrontMatter,
+  title?: string;
+  description?: string;
+  frontmatter?: FrontMatter;
 }
 
 interface FrontMatter {
-    title: string
-    description: string
+  title: string;
+  description: string;
 }
 
-const {title, description, frontmatter} = Astro.props;
+const { title, description, frontmatter } = Astro.props;
 
 var realTitle: string = "";
 var realDescription: string = "";
-if(frontmatter != null) {
-    realTitle = frontmatter!.title;
-    realDescription = frontmatter!.description;
+if (frontmatter != null) {
+  realTitle = frontmatter!.title;
+  realDescription = frontmatter!.description;
 } else {
-    realTitle = title!;
-    realDescription = description!;
+  realTitle = title!;
+  realDescription = description!;
 }
 ---
 
@@ -37,17 +37,15 @@ if(frontmatter != null) {
       <div><slot /></div>
       <Footer />
     </div>
+    <style>
+      /* Tailwind is really hard to use, so I have to do this. */
+      .hero-image {
+        margin-top: 0 !important;
+      }
+
+      .list {
+        padding-left: 0px;
+      }
+    </style>
   </body>
 </html>
-
-<style>
-
-/* Tailwind is really hard to use, so I have to do this. */
-.hero-image {
-  margin-top: 0 !important;
-}
-
-.list {
-  padding-left: 0px;
-}
-</style>
