@@ -1,22 +1,24 @@
 ---
-
 ---
-
 <nav
-  class="container prose prose-lg prose-indigo mx-auto pb-5 pl-3 pt-5 prose-a:font-semibold"
+  class="container relative flex flex-wrap justify-between gap-4 p-6 md:mx-auto justify-between"
 >
-  <a class="mr-2" href="/">Alex Stephen</a>
+  <a class="text-2xl font-extrabold capitalize" href="/">Alex Stephen</a>
 
-  <a class="mr-2">|</a>
-  <a class="mr-2" href="/writing">Writing</a>
-
-  <a class="mr-2">|</a>
-  <a class="mr-2" href="/talks">Talks</a>
+  <ul class="w-auto p-0 relative flex flex-row items-center gap-6">
+    <li>
+        <a class="mr-2" href="/writing">Writing</a>
+    </li>
+    <li>
+        <a class="mr-2" href="/talks">Talks</a>
+    </li>
+  </ul>
 </nav>
 
 <style>
-  nav a:link {
-    text-decoration: none;
-    font-weight: 300;
-  }
+nav a:link {
+  text-decoration: none;
+  font-weight: 300;
+}
 </style>
+
