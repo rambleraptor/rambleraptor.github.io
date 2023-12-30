@@ -1,0 +1,9 @@
+---
+import talks from "../data/talks.yaml";
+import TalksList from "../components/TalksList.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Alex Stephen - Talks" description="Alex Stephen - Talks">
+  <TalksList talks={talks} />
+</BaseLayout>
