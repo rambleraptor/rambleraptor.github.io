@@ -1,5 +1,4 @@
 import { z } from "astro:content";
-import talksJson from 'talks.yaml'
 
 const ConferenceSchema  = z.object({
     name: z.string(),
@@ -19,9 +18,5 @@ const TalkListSchema = z.object({
 type TalkList = z.infer<typeof TalkListSchema>;
 type TalkYear = z.infer<typeof TalkYearSchema>;
 type Conference = z.infer<typeof ConferenceSchema>;
-
-function ImportTalks(): TalkList {
-
-}
 
 export {TalkList, TalkYear, Conference}
