@@ -1,15 +1,23 @@
 ---
-
+import Twitter from "./icons/Twitter.astro";
+import Letterboxd from "./icons/Letterboxd.astro";
+import LinkedIn from "./icons/LinkedIn.astro";
+import GitHub from "./icons/GitHub.astro";
 ---
 
-<div class="footer flex flex-row bg-blue-300 h-20 w-full items-center justify-center">
-  <a href="https://www.twitter.com/rambleraptor"
-    ><img class="mr-4 w-6" alt="Twitter" src="/twitter.svg" /></a
-  >
-  <a href="https://www.github.com/rambleraptor"
-    ><img class="mr-4 w-6" alt="GitHub" src="/github.svg" height="20" /></a
-  >
-  <a href="https://www.letterboxd.com/rambleraptor"
-    ><img class="mr-4 w-6" alt="Letterboxd" src="/letterboxd.svg" height="20" /></a
-  >
+<div
+  class="footer flex h-20 w-full flex-row items-center justify-center gap-8 bg-blue-300"
+>
+  <a href="https://www.twitter.com/rambleraptor">
+    <Twitter className="h-8 w-8" />
+  </a>
+  <a href="https://www.github.com/rambleraptor">
+    <GitHub className="h-8 w-8" />
+  </a>
+  <a href="https://www.letterboxd.com/rambleraptor">
+    <Letterboxd className="h-8 w-8" />
+  </a>
+  <a href="https://www.linkedin.com/in/rambleraptor">
+    <LinkedIn className="h-8 w-8" />
+  </a>
 </div>
