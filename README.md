@@ -4,6 +4,5 @@ This is my personal website.
 
 ## Deploying
 
-Because of Tailwind nonsense, Netlify's git push integration is broken.
+This will automatically compile with Netlify!
 
-You have to run `hugo && netlify deploy --prod`
