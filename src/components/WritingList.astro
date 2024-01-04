@@ -1,7 +1,5 @@
 ---
-import { getCollection } from "astro:content";
-
-const { posts, showTags } = Astro.props;
+const { posts } = Astro.props;
 ---
 
 <section>
@@ -11,7 +9,7 @@ const { posts, showTags } = Astro.props;
         <>
           <a href={`/writing/${entry.slug}`}>{entry.data.title}</a>
           <br />
-          {entry.data.tags.map((tag) => (
+          {entry.data.tags.map((tag: string) => (
             <>
               <a
                 class="text-sm font-light text-green-600 no-underline"
