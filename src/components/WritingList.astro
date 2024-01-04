@@ -1,15 +1,13 @@
 ---
 import { getCollection } from "astro:content";
 
-const writingEntries = await getCollection("writing", ({ data }) => {
-  return import.meta.env.PROD ? data.draft !== true : true;
-});
+const {posts} = Astro.props;
 ---
 
 <section>
   <ul class="list">
     {
-      writingEntries.map((entry) => (
+      posts.map((entry) => (
         <>
           <a href={`/writing/${entry.slug}`}>{entry.data.title}</a>
           <br />
