@@ -1,20 +1,24 @@
 ---
 import { getCollection } from "astro:content";
 
-const writingEntries = await getCollection("writing", ({ data }) => {
-  return import.meta.env.PROD ? data.draft !== true : true;
-});
+const {posts, showTags} = Astro.props;
 ---
 
 <section>
   <ul class="list">
     {
-      writingEntries.map((entry) => (
+      posts.map((entry) => (
         <>
           <a href={`/writing/${entry.slug}`}>{entry.data.title}</a>
           <br />
+          {
+            entry.data.tags.map((tag) => (
+              <a class="font-light no-underline text-sm text-green-600" href={`/writing/tags/${tag}`}>{tag}</a>
+              <br />
+            ))
+          }
           <time datetime={entry.data.date.toISOString()}>
-            {entry.data.date.toDateString()}
+            {entry.data.date.toDateString().split(' ').slice(1).join(' ')}
           </time>
         </>
       ))

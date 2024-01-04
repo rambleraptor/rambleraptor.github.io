@@ -1,0 +1,30 @@
+--- 
+import {getCollection} from "astro:content";
+
+import WritingList from "../../../components/WritingList.astro";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+export async function getStaticPaths() {
+    const posts = await getCollection("writing", ({ data }) => {
+        return import.meta.env.PROD ? data.draft !== true : true;
+    });
+
+    const uniqueTags = [...new Set(posts.map((post) => post.data.tags).flat())];
+    return uniqueTags.map((tag) => {
+        const filteredPosts = posts.filter((post) => post.data.tags.includes(tag));
+        return {
+        params: { tag },
+        props: { posts: filteredPosts },
+        };
+    });
+
+}
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+---
+
+<BaseLayout title=`Alex Stephen - Writing / ${tag}` description=`Alex Stephen - Writing / ${tag}`>
+    <h1>Writing / {tag}</h1>
+    <WritingList posts={posts}/>
+</BaseLayout>

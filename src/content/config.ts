@@ -6,6 +6,7 @@ const writingCollection = defineCollection({
     title: z.string(),
     date: z.date(),
     draft: z.boolean(),
+    tags: z.array(z.string()),
   }),
 });
 
