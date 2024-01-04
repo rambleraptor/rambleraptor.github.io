@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 
-const {posts} = Astro.props;
+const {posts, showTags} = Astro.props;
 ---
 
 <section>
@@ -11,8 +11,14 @@ const {posts} = Astro.props;
         <>
           <a href={`/writing/${entry.slug}`}>{entry.data.title}</a>
           <br />
+          {
+            entry.data.tags.map((tag) => (
+              <a class="font-light no-underline text-sm text-green-600" href={`/writing/tags/${tag}`}>{tag}</a>
+              <br />
+            ))
+          }
           <time datetime={entry.data.date.toISOString()}>
-            {entry.data.date.toDateString()}
+            {entry.data.date.toDateString().split(' ').slice(1).join(' ')}
           </time>
         </>
       ))

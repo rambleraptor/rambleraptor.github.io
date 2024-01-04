@@ -2,8 +2,7 @@
 title: "Minions Are the Future of Cinema"
 date: 2022-06-29T23:33:21-07:00
 draft: false
-tags: 
-    - popculture
+tags: ['popculture']
 ---
 
 # Minions are the Future of Cinema
