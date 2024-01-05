@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 
-import WritingList from "../components/WritingList.astro";
+import WritingList from "../components/writing/WritingList.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 const posts = await getCollection("writing", ({ data }) => {

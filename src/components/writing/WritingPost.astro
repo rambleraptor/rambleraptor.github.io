@@ -1,20 +1,11 @@
 ---
+import WritingTags from './WritingTags.astro';
 const {entry} = Astro.props;
 ---
 <div class="p-4">
   <a href={`/writing/${entry.slug}`}>{entry.data.title}</a>
   <br />
-  {entry.data.tags.map((tag: string) => (
-    <>
-      <a
-        class="text-sm font-light text-green-600 no-underline"
-        href={`/writing/tags/${tag}`}
-      >
-        {tag}
-      </a>
-      <br />
-    </>
-  ))}
+  <WritingTags tags={entry.data.tags}/>
   <time datetime={entry.data.date.toISOString()}>
     {entry.data.date.toDateString().split(" ").slice(1).join(" ")}
   </time>

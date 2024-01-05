@@ -1,0 +1,19 @@
+---
+const {tags} = Astro.props
+
+const colors = {
+    'popculture': 'text-green-600',
+    'archive': 'text-slate-500',
+}
+---
+{tags.map((tag: string) => (
+    <>
+      <a
+        class:list={["text-sm",  "font-light",  colors[tag], "no-underline"]}
+        href={`/writing/tags/${tag}`}
+      >
+        {tag}
+      </a>
+      <br />
+    </>
+  ))}
