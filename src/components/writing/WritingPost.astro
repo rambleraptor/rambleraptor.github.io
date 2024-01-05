@@ -2,7 +2,7 @@
 import WritingTags from './WritingTags.astro';
 const {entry} = Astro.props;
 ---
-<div>
+<div class="pb-4">
   <a href={`/writing/${entry.slug}`}>{entry.data.title}</a>
   <br />
   <WritingTags tags={entry.data.tags}/>
