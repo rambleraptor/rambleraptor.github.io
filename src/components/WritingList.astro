@@ -1,30 +1,12 @@
 ---
+import WritingPost from './WritingPost.astro';
 const { posts } = Astro.props;
 ---
 
 <section>
   <ul class="list">
     {
-      posts.map((entry) => (
-        <>
-          <a href={`/writing/${entry.slug}`}>{entry.data.title}</a>
-          <br />
-          {entry.data.tags.map((tag: string) => (
-            <>
-              <a
-                class="text-sm font-light text-green-600 no-underline"
-                href={`/writing/tags/${tag}`}
-              >
-                {tag}
-              </a>
-              <br />
-            </>
-          ))}
-          <time datetime={entry.data.date.toISOString()}>
-            {entry.data.date.toDateString().split(" ").slice(1).join(" ")}
-          </time>
-        </>
-      ))
+      posts.map((entry) => <WritingPost entry={entry} />)
     }
   </ul>
 </section>
