@@ -1,12 +1,14 @@
 ---
 import { getCollection } from "astro:content";
 
-import WritingList from "../components/WritingList.astro";
+import WritingList from "../components/writing/WritingList.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 const posts = await getCollection("writing", ({ data }) => {
   return import.meta.env.PROD ? data.draft !== true : true;
 });
+
+posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
 ---
 
 <BaseLayout title="Alex Stephen - Writing" description="Alex Stephen - Writing">

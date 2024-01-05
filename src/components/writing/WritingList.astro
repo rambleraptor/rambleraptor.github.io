@@ -1,0 +1,18 @@
+---
+import WritingPost from './WritingPost.astro';
+const { posts } = Astro.props;
+---
+
+<section>
+  <ul class="list">
+    {
+      posts.map((entry) => <WritingPost entry={entry} />)
+    }
+  </ul>
+</section>
+
+<style>
+  .list {
+    padding-left: 0px;
+  }
+</style>
