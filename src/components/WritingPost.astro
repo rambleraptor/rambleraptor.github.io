@@ -1,6 +1,7 @@
 ---
 const {entry} = Astro.props;
 ---
+<div class="p-4">
   <a href={`/writing/${entry.slug}`}>{entry.data.title}</a>
   <br />
   {entry.data.tags.map((tag: string) => (
@@ -17,3 +18,4 @@ const {entry} = Astro.props;
   <time datetime={entry.data.date.toISOString()}>
     {entry.data.date.toDateString().split(" ").slice(1).join(" ")}
   </time>
+</div>
