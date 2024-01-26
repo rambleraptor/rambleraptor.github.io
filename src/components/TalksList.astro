@@ -1,11 +1,15 @@
 ---
+import type { CollectionEntry } from 'astro:content';
+interface Props {
+  talks: CollectionEntry<'talks'>
+}
+
 const { talks } = Astro.props;
-console.log(talks.data);
 ---
 
 <h1>Talks</h1>
 {
-  talks.talks.map((year) => (
+  talks.data.talks.map((year) => (
     <section class="prose-ul:list-none">
       <h3 class="prose-indigo">{year.year}</h3>
       <ul>
