@@ -1,7 +1,10 @@
 ---
-import talks from "../data/talks.yaml";
+import { getCollection } from "astro:content";
 import TalksList from "../components/TalksList.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+
+const allTalkFiles = await getCollection("talks");
+const talks = allTalkFiles[0];
 ---
 
 <BaseLayout title="Alex Stephen - Talks" description="Alex Stephen - Talks">

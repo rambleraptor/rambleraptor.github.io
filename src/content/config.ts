@@ -10,6 +10,21 @@ const writingCollection = defineCollection({
   }),
 });
 
+const talkCollection = defineCollection({
+  type: "data",
+  schema: z.object({
+    talks: z.array(z.object({
+      year: z.number(),
+      conferences: z.array(z.object({
+        title: z.string(),
+        conference: z.string(),
+        video: z.string().optional(),
+      })),
+    })),
+  }),
+});
+
 export const collections = {
   writing: writingCollection,
+  talks: talkCollection,
 };

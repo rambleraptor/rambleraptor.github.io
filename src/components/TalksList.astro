@@ -1,19 +1,19 @@
 ---
-import {type TalkList, type YearList, type Conference} from '../content/types.ts';
-
+import type { CollectionEntry } from 'astro:content';
 interface Props {
-  talks: TalkList
+  talks: CollectionEntry<'talks'>
 }
+
 const { talks } = Astro.props;
 ---
 
 <h1>Talks</h1>
 {
-  talks.talks.map((year: YearList) => (
+  talks.data.talks.map((year) => (
     <section class="prose-ul:list-none">
       <h3 class="prose-indigo">{year.year}</h3>
       <ul>
-        {year.conferences.map((conference: Conference) => (
+        {year.conferences.map((conference) => (
           <li>
             <a href="{conference.video}">{conference.title}</a>
             <br />
