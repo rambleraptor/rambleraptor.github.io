@@ -4,24 +4,26 @@ import Letterboxd from "./icons/Letterboxd.astro";
 import LinkedIn from "./icons/LinkedIn.astro";
 import GitHub from "./icons/GitHub.astro";
 import IMDB from "./icons/IMDB.astro";
+
+const iconClass = 'h-8 w-8 hover:text-slate-50 hover:fill-current';
 ---
 
 <div
   class="footer flex h-20 w-full flex-row items-center justify-center gap-8 bg-blue-300"
 >
   <a href="https://www.twitter.com/rambleraptor">
-    <Twitter className="h-8 w-8" />
+    <Twitter className={iconClass} />
   </a>
   <a href="https://www.github.com/rambleraptor">
-    <GitHub className="h-8 w-8" />
+    <GitHub className={iconClass} />
   </a>
   <a href="https://www.letterboxd.com/rambleraptor">
-    <Letterboxd className="h-8 w-8" />
+    <Letterboxd className={iconClass} />
   </a>
   <a href="https://www.linkedin.com/in/rambleraptor">
-    <LinkedIn className="h-8 w-8" />
+    <LinkedIn className={iconClass} />
   </a>
   <a href="https://www.imdb.com/name/nm1906280/">
-    <IMDB className="h-8 w-8" />
+    <IMDB className={iconClass} />
   </a>
 </div>
