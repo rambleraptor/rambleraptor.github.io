@@ -1,11 +1,12 @@
 ---
-import WritingTags from './WritingTags.astro';
-const {entry} = Astro.props;
+import WritingTags from "./WritingTags.astro";
+const { entry } = Astro.props;
 ---
+
 <div class="pb-4">
   <a href={`/writing/${entry.slug}`}>{entry.data.title}</a>
   <br />
-  <WritingTags tags={entry.data.tags}/>
+  <WritingTags tags={entry.data.tags} />
   <time datetime={entry.data.date.toISOString()}>
     {entry.data.date.toDateString().split(" ").slice(1).join(" ")}
   </time>
