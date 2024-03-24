@@ -1,3 +1,7 @@
+All Markdown posts and images are copyright Alex Stephen, unless otherwise noted.
+
+All other code is licensed MIT.
+
 The MIT License (MIT)
 
 Copyright (c) 2020 Alex Stephen
