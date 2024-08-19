@@ -1,5 +1,5 @@
 ---
-title: The Difficulties of Code Generation (TODO: //TITLE?)
+title: The Difficulties of Code Generation TODO TITLE
 date: 2024-06-02
 draft: true
 tags: ["tech"]
