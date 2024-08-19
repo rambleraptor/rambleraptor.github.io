@@ -3,7 +3,7 @@ import Twitter from "./icons/Twitter.astro";
 import Letterboxd from "./icons/Letterboxd.astro";
 import LinkedIn from "./icons/LinkedIn.astro";
 import GitHub from "./icons/GitHub.astro";
-import IMDB from "./icons/IMDB.astro";
+import RSS from "./icons/RSS.astro";
 
 const iconClass = "h-8 w-8 hover:text-slate-50 hover:fill-current";
 ---
@@ -23,7 +23,7 @@ const iconClass = "h-8 w-8 hover:text-slate-50 hover:fill-current";
   <a href="https://www.linkedin.com/in/rambleraptor">
     <LinkedIn className={iconClass} />
   </a>
-  <a href="https://www.imdb.com/name/nm1906280/">
-    <IMDB className={iconClass} />
+  <a href="/feed.xml">
+    <RSS className={iconClass} />
   </a>
 </div>
