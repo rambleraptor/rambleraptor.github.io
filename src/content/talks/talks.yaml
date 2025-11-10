@@ -1,4 +1,9 @@
 talks:
+  - year: 2025
+    conferences:
+      - title: An Insider's Look at Possible Apache Iceberg v4 Specification Changes
+        conference: Apache Iceberg Bay Area Meetup
+        video: https://www.youtube.com/watch?v=0YuPQ_1PreY
   - year: 2019
     conferences:
       - title: Google Cloud's Journey to Ansible Collections
