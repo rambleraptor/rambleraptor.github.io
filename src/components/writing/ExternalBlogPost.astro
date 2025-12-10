@@ -15,7 +15,7 @@ interface Props {
 const { post } = Astro.props;
 ---
 
-<div class="pb-4 pl-3 border-l-2 border-blue-400 dark:border-blue-500">
+<div class="pb-4">
   <a
     href={post.url}
     target="_blank"
@@ -51,14 +51,4 @@ const { post } = Astro.props;
   <time datetime={post.date.toISOString()}>
     {post.date.toDateString().split(" ").slice(1).join(" ")}
   </time>
-  {
-    post.description && (
-      <>
-        <br />
-        <span class="text-sm text-gray-600 dark:text-gray-400">
-          {post.description}
-        </span>
-      </>
-    )
-  }
 </div>
