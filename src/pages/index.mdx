@@ -6,19 +6,21 @@ description: About Alex Stephen
 
 import { Image } from "astro:assets";
 import meImage from "../images/me.jpg";
+import CompanyList from "../components/CompanyList.astro";
 
-<Image src={meImage} class="img-fluid hero-image" alt="Image of me" />
+<div class="homepage-header">
+  <Image src={meImage} class="profile-image" alt="Image of me" />
+  <h1>Alex Stephen</h1>
+  <p class="bio">
+    Software engineer from the Mitten, currently in Seattle.<br />
+    Building data infrastructure and developer tools.
+  </p>
+</div>
 
-# Hi! I'm Alex!
+## Work
 
-I'm a software engineer and all-around millennial from the Mitten, currently in Seattle.
+<CompanyList />
 
-Right now, I'm working at [Google](https://www.google.com) working on BigQuery!
-
-Before that, I was building declarative tools and code generators over at
-[Google](https://www.google.com), data pipelines at
-[Palantir](https://www.palantir.com) and Insurance software at [Rippling](https://www.rippling.com).
-
-Before Palantir, I was at the [University of Michigan](https://www.umich.edu) (Go Blue!).
+## Find me online
 
 You can find me spewing nonsense over on the bird app [@rambleraptor](https://www.twitter.com/rambleraptor) and over on [GitHub](https://www.github.com/rambleraptor). Or you can always [email me](mailto:astephen2@gmail.com).

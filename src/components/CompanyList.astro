@@ -1,0 +1,193 @@
+---
+interface Company {
+  name: string;
+  logo: string;
+  years: string;
+  description: string;
+  url?: string;
+}
+
+const companies: Company[] = [
+  {
+    name: "Google",
+    logo: "🔍",
+    years: "2021 - Present",
+    description: "Working on BigQuery, building scalable data analytics infrastructure.",
+    url: "https://www.google.com"
+  },
+  {
+    name: "Google",
+    logo: "🔍",
+    years: "2019 - 2021",
+    description: "Built declarative tools and code generators to improve developer productivity.",
+    url: "https://www.google.com"
+  },
+  {
+    name: "Palantir",
+    logo: "🔮",
+    years: "2017 - 2019",
+    description: "Built data pipelines for large-scale data integration and analysis.",
+    url: "https://www.palantir.com"
+  },
+  {
+    name: "Rippling",
+    logo: "🌊",
+    years: "2016 - 2017",
+    description: "Developed insurance software to streamline HR and benefits management.",
+    url: "https://www.rippling.com"
+  },
+  {
+    name: "University of Michigan",
+    logo: "🏛️",
+    years: "2012 - 2016",
+    description: "Go Blue!",
+    url: "https://www.umich.edu"
+  }
+];
+---
+
+<div class="company-list">
+  {companies.map((company) => (
+    <div class="company-item" data-expanded="false">
+      <button class="company-header" type="button">
+        <div class="company-info">
+          <span class="company-logo" aria-hidden="true">{company.logo}</span>
+          <div class="company-details">
+            <span class="company-name">{company.name}</span>
+            <span class="company-years">{company.years}</span>
+          </div>
+        </div>
+        <span class="expand-icon" aria-hidden="true">›</span>
+      </button>
+      <div class="company-description">
+        <p>{company.description}</p>
+      </div>
+    </div>
+  ))}
+</div>
+
+<style>
+  .company-list {
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .company-item {
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: all 0.2s ease;
+  }
+
+  .company-item:hover {
+    border-color: #3b82f6;
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.1);
+  }
+
+  .company-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.2s ease;
+  }
+
+  .company-header:hover {
+    background-color: #f9fafb;
+  }
+
+  .company-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+  }
+
+  .company-logo {
+    font-size: 2rem;
+    flex-shrink: 0;
+  }
+
+  .company-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .company-name {
+    font-weight: 600;
+    font-size: 1.125rem;
+    color: #111827;
+  }
+
+  .company-years {
+    font-size: 0.875rem;
+    color: #6b7280;
+  }
+
+  .expand-icon {
+    font-size: 1.5rem;
+    color: #9ca3af;
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+  }
+
+  .company-item[data-expanded="true"] .expand-icon {
+    transform: rotate(90deg);
+  }
+
+  .company-description {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0 1rem;
+  }
+
+  .company-item[data-expanded="true"] .company-description {
+    max-height: 200px;
+    padding: 0 1rem 1rem 1rem;
+  }
+
+  .company-description p {
+    margin: 0;
+    color: #4b5563;
+    font-size: 0.9375rem;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 640px) {
+    .company-logo {
+      font-size: 1.5rem;
+    }
+
+    .company-name {
+      font-size: 1rem;
+    }
+
+    .company-years {
+      font-size: 0.8125rem;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const companyItems = document.querySelectorAll('.company-item');
+
+    companyItems.forEach((item) => {
+      const header = item.querySelector('.company-header');
+
+      header?.addEventListener('click', () => {
+        const isExpanded = item.getAttribute('data-expanded') === 'true';
+        item.setAttribute('data-expanded', (!isExpanded).toString());
+      });
+    });
+  });
+</script>
