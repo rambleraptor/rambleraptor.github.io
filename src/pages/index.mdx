@@ -4,23 +4,36 @@ title: Alex Stephen
 description: About Alex Stephen
 ---
 
-import { Image } from "astro:assets";
-import meImage from "../images/me.jpg";
 import CompanyList from "../components/CompanyList.astro";
 
 <div class="homepage-header">
-  <Image src={meImage} class="profile-image" alt="Image of me" />
-  <h1>Alex Stephen</h1>
-  <p class="bio">
-    Software engineer from the Mitten, currently in Seattle.<br />
-    Building data infrastructure and developer tools.
+  <h1 class="homepage-title">Alex Stephen</h1>
+  <p class="homepage-bio">
+    I'm a software engineer living in Seattle, currently building data infrastructure at Google.
   </p>
 </div>
 
-## Work
+<div class="content-sections">
+  <section class="content-section">
+    <h2 class="section-title">Work</h2>
+    <CompanyList />
+  </section>
 
-<CompanyList />
-
-## Find me online
-
-You can find me spewing nonsense over on the bird app [@rambleraptor](https://www.twitter.com/rambleraptor) and over on [GitHub](https://www.github.com/rambleraptor). Or you can always [email me](mailto:astephen2@gmail.com).
+  <section class="content-section">
+    <h2 class="section-title">Online</h2>
+    <div class="link-list">
+      <a href="https://www.twitter.com/rambleraptor" target="_blank" rel="noopener noreferrer" class="link-item">
+        <span class="link-label">Twitter</span>
+        <span class="link-description">Spewing nonsense</span>
+      </a>
+      <a href="https://www.github.com/rambleraptor" target="_blank" rel="noopener noreferrer" class="link-item">
+        <span class="link-label">GitHub</span>
+        <span class="link-description">Open source projects</span>
+      </a>
+      <a href="mailto:astephen2@gmail.com" class="link-item">
+        <span class="link-label">Email</span>
+        <span class="link-description">astephen2@gmail.com</span>
+      </a>
+    </div>
+  </section>
+</div>

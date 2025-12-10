@@ -47,30 +47,93 @@ if (frontmatter != null) {
         padding-left: 0px;
       }
 
+      /* Homepage minimalist styles */
       .homepage-header {
-        text-align: center;
-        margin-bottom: 3rem;
+        margin-bottom: 4rem;
       }
 
-      .profile-image {
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        object-fit: cover;
-        margin: 0 auto 1.5rem auto !important;
-        display: block;
+      .homepage-title {
+        font-size: 2.25rem;
+        font-weight: 700;
+        color: #0f172a;
+        margin: 0 0 1rem 0 !important;
+        letter-spacing: -0.025em;
       }
 
-      .homepage-header h1 {
-        margin-top: 0;
-        margin-bottom: 0.5rem;
-      }
-
-      .homepage-header .bio {
+      .homepage-bio {
         font-size: 1.125rem;
-        color: #6b7280;
-        margin-top: 0;
-        line-height: 1.6;
+        color: #64748b;
+        margin: 0 !important;
+        line-height: 1.7;
+        max-width: 600px;
+      }
+
+      .content-sections {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+      }
+
+      .content-section {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .section-title {
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: #64748b;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin: 0 !important;
+      }
+
+      .link-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .link-item {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+        padding: 0.75rem 0;
+        text-decoration: none;
+        transition: all 0.15s ease;
+        border-radius: 0.375rem;
+      }
+
+      .link-item:hover {
+        background-color: #f8fafc;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+      }
+
+      .link-label {
+        font-weight: 600;
+        font-size: 1rem;
+        color: #0f172a;
+      }
+
+      .link-description {
+        font-size: 0.875rem;
+        color: #64748b;
+      }
+
+      @media (max-width: 640px) {
+        .homepage-title {
+          font-size: 1.875rem;
+        }
+
+        .homepage-bio {
+          font-size: 1rem;
+        }
+
+        .content-sections {
+          gap: 3rem;
+        }
       }
     </style>
   </body>
