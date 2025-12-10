@@ -1,0 +1,19 @@
+# External blog posts
+# Add your external blog posts here following this format:
+#
+# - title: "Your Article Title"
+#   url: "https://example.com/your-article"
+#   site: "Website Name"
+#   date: 2024-01-15
+#   tags: ["tag1", "tag2"]  # Optional
+#   description: "A brief description"  # Optional
+
+# Example (remove or replace with your own posts):
+# - title: "My Article on Medium"
+#   url: "https://medium.com/@yourname/article"
+#   site: "Medium"
+#   date: 2024-01-15
+#   tags: ["technology"]
+#   description: "An interesting article about tech"
+
+[]  # Empty array - replace with your posts

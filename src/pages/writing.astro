@@ -1,5 +1,5 @@
 ---
-import { getCollection } from "astro:content";
+import { getCollection, getEntry } from "astro:content";
 
 import WritingList from "../components/writing/WritingList.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
@@ -8,7 +8,19 @@ const posts = await getCollection("writing", ({ data }) => {
   return import.meta.env.PROD ? data.draft !== true : true;
 });
 
-posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+// Get external posts
+const externalPostsEntry = await getEntry("external-posts", "external-posts");
+const externalPosts = externalPostsEntry?.data || [];
+
+// Combine internal and external posts
+const allPosts = [...posts, ...externalPosts];
+
+// Sort all posts by date
+allPosts.sort((a, b) => {
+  const dateA = "data" in a ? a.data.date : a.date;
+  const dateB = "data" in b ? b.data.date : b.date;
+  return dateB.getTime() - dateA.getTime();
+});
 ---
 
 <BaseLayout title="Alex Stephen - Writing" description="Alex Stephen - Writing">
@@ -18,5 +30,5 @@ posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
     business through the lens of data and storytelling.
   </p>
   <hr />
-  <WritingList posts={posts} />
+  <WritingList posts={allPosts} />
 </BaseLayout>
