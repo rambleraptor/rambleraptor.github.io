@@ -28,7 +28,21 @@ const talkCollection = defineCollection({
   }),
 });
 
+const externalPostsCollection = defineCollection({
+  type: "data",
+  schema: z.array(
+    z.object({
+      title: z.string(),
+      url: z.string().url(),
+      site: z.string(),
+      date: z.date(),
+      tags: z.array(z.string()).optional(),
+    }),
+  ),
+});
+
 export const collections = {
   writing: writingCollection,
   talks: talkCollection,
+  "external-posts": externalPostsCollection,
 };

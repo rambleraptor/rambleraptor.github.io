@@ -1,26 +1,19 @@
 ---
-import { getCollection } from "astro:content";
-
 import WritingList from "../../../components/writing/WritingList.astro";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { getAllTags, getPostsByTag } from "../../../utils/posts";
 
 export async function getStaticPaths() {
-  const posts = await getCollection("writing", ({ data }) => {
-    return import.meta.env.PROD ? data.draft !== true : true;
-  });
+  const uniqueTags = await getAllTags();
 
-  const uniqueTags = [...new Set(posts.map((post) => post.data.tags).flat())];
-  return uniqueTags.map((tag) => {
-    const filteredPosts = posts.filter((post) => post.data.tags.includes(tag));
-    return {
-      params: { tag },
-      props: { posts: filteredPosts },
-    };
-  });
+  return uniqueTags.map((tag) => ({
+    params: { tag },
+    props: { tag },
+  }));
 }
 
 const { tag } = Astro.params;
-const { posts } = Astro.props;
+const posts = await getPostsByTag(tag);
 ---
 
 <BaseLayout

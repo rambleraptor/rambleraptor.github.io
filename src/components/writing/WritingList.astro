@@ -1,11 +1,21 @@
 ---
 import WritingPost from "./WritingPost.astro";
+import ExternalBlogPost from "./ExternalBlogPost.astro";
+import { isExternalPost } from "../../utils/posts";
+
 const { posts } = Astro.props;
 ---
 
 <section>
   <ul class="list">
-    {posts.map((entry) => <WritingPost entry={entry} />)}
+    {
+      posts.map((item) => {
+        if (isExternalPost(item)) {
+          return <ExternalBlogPost post={item} />;
+        }
+        return <WritingPost entry={item} />;
+      })
+    }
   </ul>
 </section>
 
