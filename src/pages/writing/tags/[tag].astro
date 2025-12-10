@@ -1,57 +1,19 @@
 ---
-import { getCollection, getEntry } from "astro:content";
-
 import WritingList from "../../../components/writing/WritingList.astro";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
+import { getAllTags, getPostsByTag } from "../../../utils/posts";
 
 export async function getStaticPaths() {
-  const posts = await getCollection("writing", ({ data }) => {
-    return import.meta.env.PROD ? data.draft !== true : true;
-  });
+  const uniqueTags = await getAllTags();
 
-  // Get external posts
-  const externalPostsEntry = await getEntry("external-posts", "external-posts");
-  const externalPosts = externalPostsEntry?.data || [];
-
-  // Collect all tags from internal posts
-  const internalTags = posts.map((post) => post.data.tags).flat();
-
-  // Collect all tags from external posts
-  const externalTags = externalPosts
-    .filter((post) => post.tags)
-    .map((post) => post.tags)
-    .flat();
-
-  const uniqueTags = [...new Set([...internalTags, ...externalTags])];
-
-  return uniqueTags.map((tag) => {
-    // Filter internal posts by tag
-    const filteredInternalPosts = posts.filter((post) =>
-      post.data.tags.includes(tag)
-    );
-
-    // Filter external posts by tag
-    const filteredExternalPosts = externalPosts.filter(
-      (post) => post.tags && post.tags.includes(tag)
-    );
-
-    // Combine and sort by date
-    const allPosts = [...filteredInternalPosts, ...filteredExternalPosts];
-    allPosts.sort((a, b) => {
-      const dateA = "data" in a ? a.data.date : a.date;
-      const dateB = "data" in b ? b.data.date : b.date;
-      return dateB.getTime() - dateA.getTime();
-    });
-
-    return {
-      params: { tag },
-      props: { posts: allPosts },
-    };
-  });
+  return uniqueTags.map((tag) => ({
+    params: { tag },
+    props: { tag },
+  }));
 }
 
 const { tag } = Astro.params;
-const { posts } = Astro.props;
+const posts = await getPostsByTag(tag);
 ---
 
 <BaseLayout
