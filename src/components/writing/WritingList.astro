@@ -1,6 +1,8 @@
 ---
 import WritingPost from "./WritingPost.astro";
 import ExternalBlogPost from "./ExternalBlogPost.astro";
+import { isExternalPost } from "../../utils/posts";
+
 const { posts } = Astro.props;
 ---
 
@@ -8,11 +10,9 @@ const { posts } = Astro.props;
   <ul class="list">
     {
       posts.map((item) => {
-        // Check if this is an external post (has a 'url' field)
-        if ("url" in item) {
+        if (isExternalPost(item)) {
           return <ExternalBlogPost post={item} />;
         }
-        // Otherwise it's an internal post entry
         return <WritingPost entry={item} />;
       })
     }

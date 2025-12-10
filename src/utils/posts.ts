@@ -1,16 +1,23 @@
 import { getCollection, getEntry } from "astro:content";
 
 type InternalPost = Awaited<ReturnType<typeof getCollection<"writing">>>[0];
-type ExternalPost = {
+
+export type ExternalPost = {
   title: string;
   url: string;
   site: string;
   date: Date;
   tags?: string[];
-  description?: string;
 };
 
 export type Post = InternalPost | ExternalPost;
+
+/**
+ * Type guard to check if a post is an external post
+ */
+export function isExternalPost(post: Post): post is ExternalPost {
+  return "url" in post;
+}
 
 /**
  * Fetches all posts (internal and external) and returns them sorted by date

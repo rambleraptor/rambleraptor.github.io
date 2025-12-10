@@ -1,15 +1,9 @@
 ---
 import WritingTags from "./WritingTags.astro";
+import type { ExternalPost } from "../../utils/posts";
 
 interface Props {
-  post: {
-    title: string;
-    url: string;
-    site: string;
-    date: Date;
-    tags?: string[];
-    description?: string;
-  };
+  post: ExternalPost;
 }
 
 const { post } = Astro.props;
