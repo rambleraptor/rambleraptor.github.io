@@ -1,19 +1,20 @@
-# External blog posts
-# Add your external blog posts here following this format:
-#
-# - title: "Your Article Title"
-#   url: "https://example.com/your-article"
-#   site: "Website Name"
-#   date: 2024-01-15
-#   tags: ["tag1", "tag2"]  # Optional
-#   description: "A brief description"  # Optional
+- title: "AEP Terraform Provider"
+  url: "https://aep.dev/blog/terraform-provider/"
+  site: "aep.dev"
+  date: 2025-03-31
+  tags: ["technology"]
+  description: "Introducing an auto-generated Terraform provider built on AEP-compliant APIs"
 
-# Example (remove or replace with your own posts):
-# - title: "My Article on Medium"
-#   url: "https://medium.com/@yourname/article"
-#   site: "Medium"
-#   date: 2024-01-15
-#   tags: ["technology"]
-#   description: "An interesting article about tech"
+- title: "Building Better APIs Together: AEP's 2024 Year in Review"
+  url: "https://aep.dev/blog/2024-in-review/"
+  site: "aep.dev"
+  date: 2024-12-19
+  tags: ["technology"]
+  description: "The API Enhancement Proposals project's major accomplishments throughout 2024"
 
-[]  # Empty array - replace with your posts
+- title: "Announcing the aep-2026 Release"
+  url: "https://aep.dev/blog/aep-2026-release/"
+  site: "aep.dev"
+  date: 2024-12-08
+  tags: ["technology"]
+  description: "A stable API design specification addressing coordination challenges in software development"
