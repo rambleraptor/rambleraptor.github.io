@@ -1,0 +1,81 @@
+---
+title: "OpenAPI isn't Enough"
+date: 2026-01-07
+draft: false
+tags: ["tech"]
+---
+
+import { Image } from 'astro:assets';
+import openAPIImage from '../images/openapi-isnt-enough.png';
+
+# OpenAPI isn't Enough
+
+<Image src={openAPIImage} alt="A bridge with the middle missing" />
+
+In this post, I'm going to show you how OpenAPI doesn't hide the faults of your APIs, and I'm going to introduce you to the [AEP API design standard](http://aep.dev) for building better APIs.
+
+If you're building an API today, you're probably describing it using OpenAPI. OpenAPI is the de facto standard for describing all types of REST APIs. But it’s important to note: OpenAPI is simply a description language. It has no opinions on your API design. In fact, it's the opposite\! OpenAPI wants to express [**as many APIs as possible**](https://github.com/OAI/OpenAPI-Specification/blob/e771a3ac9d131b7776cf75971bd35c6655e4ac9d/README.md?plain=1#L14), regardless of their design quality.
+
+OpenAPI by itself isn't enough\! It doesn't solve design problems. These issues above affect everyone from startups to the largest companies, and this  helped inspire the [AEP project](http://aep.dev).
+
+# Resource-oriented APIs are reusable, one-off APIs aren't
+
+When I was in startup land, we built our APIs with a single use-case in mind. `GET /sidebar-items` would fetch the list of sidebar items…which was used in exactly one place in the UI. `POST /wizard-step-2` was used to post the information used in the second screen of the wizard, despite intentions to jury-rig it elsewhere. Every time we needed to make a frontend change, there was a corresponding backend change that had to happen first.
+
+Nothing about this was extensible. Our APIs could only be taken as far as our initial use-cases could imagine. Good luck trying to have developers build anything new on top of `/wizard-step-2`… other than the second step of the wizard.
+
+A true reusable service contains interconnected resources and standard methods to operate on them \- `Books` have `Authors`, a `Customer` has an `Invoice` that belongs to a `Store`.
+
+All of our tooling took in OpenAPI documents and gave us surfaces (client libraries, CLIs, etc) to interact with those APIs. But OpenAPI forces us into the weeds. We're stuck thinking about **endpoints** when we want to think about **resources**. We can't express what our resources are, the endpoints that our resource supports, and which endpoints are necessary for which actions. We're just wondering if the endpoint can handle everything in the second step of the wizard.
+
+# How should your APIs work?
+
+For a production-grade List API, you're probably going to implement pagination. How should you express pagination? Tokens? Indexes (skip the first 100 results)? Something else entirely? You can imagine a room of staff-level engineers bikeshedding over the merits of each solution. One team chooses tokens, another chooses indexes, a third had a "really cool idea" based off some new trendy database. In the end, your organization now has three API sets handling the same concept three different ways.
+
+Back to OpenAPI: Is your OpenAPI spec and its generated clients aware of this? Absolutely not\! OpenAPI doesn't treat `pageToken` differently from any other field. It certain doesn't know that `nextPageToken` or `pageIndex` are pagination related.
+
+Can you teach your downstream tooling which fields have special meanings? OpenAPI has delegated all of this to extensions. Each tool has its own set of extensions. With absolutely no standardization or ownership, every tool will require understanding \+ adding a special set of extensions to implement some behavior (e.g. wrapping a long-running operation’s polling loop in a promise).
+
+# Which APIs do I call?
+
+One of the issues I ran into at Google was the order in which you need to make certain API calls in order to accomplish a task. Let's say I want to add memory to my virtual machine to help run the latest local LLM. How would I do this?
+
+Don't worry about the actual APIs. Just make a guess about what hypothetical APIs you might call to make this happen:
+
+- I could call the `update` API on my virtual machine with the new memory value. That would be *really* easy\!
+- There could be a special `changeMemory` API that's just responsible for changing the memory value.
+- Memory might be an immutable value, so I might have to `delete` my virtual machine and `create` one with identical values, but with my new memory value.
+- I might have to `stop` the machine, call `setMachineType` to change the machine type to one that has at least the amount of memory I want, `start` the machine, and then make sure it started up properly.
+
+Any guesses which is right? (It's the oddly specific last one, of course).
+
+How is a machine supposed to read an OpenAPI spec and discern that series of API calls for this particular workflow? The [OpenAPI Arrazzo project](https://github.com/OAI/Arazzo-Specification) gives us ways to define workflows like I've described here. But that would require me writing up workflows for every possible change that my virtual machine could accomplish and then generating code snippets to handle each one.
+
+What would be better is if the `update` API followed a standard such that we could consistently call any `update` API with any new value and the API would make the changes (or throw an error). That's part of the AEP project \- no special edge cases.
+
+# The AEP Standard
+
+If OpenAPI is the syntax, we need help with the semantics. This is where **AEP (API Enhancement Proposals)** comes in.
+
+We shouldn't be linting for curly brackets. We should be linting for design patterns.
+
+AEPs are a set of distinct, opinionated design documents. They don't just say "use JSON." They say:
+
+* "This is exactly how pagination works across every paginated API method."
+* "This is how we handle long-running operations."
+* "This is how we structure resources and their relationships."
+
+AEP is not a standard for standardization's sake. It is a way to institutionalize the "hard" decisions. By adopting an AEP model, the resources become the focus and all of your users know how to access those resources.
+
+These decisions are the result of decades of industry experience. Experts across companies such as Google, Netflix, Roblox, IBM, and others have contributed to the specification. Many of the guidance was inspired or adopted from google.aip.dev or IETF RFCs on REST best practices.
+
+On top of that, it's a way to build better tools on top of those hard decisions.
+
+- We've developed a Terraform provider that understands exactly which resources to pull in and assumes a fully declarative API.
+- We've built out MCP tools that can map one-to-one with your resources.
+- We've developed a UI that doesn't just show you a list of APIs, but lets your users focus on resources and abstract away the APIs.
+
+An OpenAPI document is a useful artifact for generating SDKs, but don't confuse it for a design strategy. If the design isn't being encoded in the APIs, it's being discretely encoded throughout your clients.
+
+*Thanks to [Marsh Gardiner](https://www.linkedin.com/in/marshgardiner/), [Richard Frankel](http://linkedin.com/in/rfrankel), and [Yusuke Tsutsumi](https://www.linkedin.com/in/yusuke-tsutsumi/) for all his help on this post*
+
