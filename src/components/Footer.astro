@@ -5,25 +5,25 @@ import LinkedIn from "./icons/LinkedIn.astro";
 import GitHub from "./icons/GitHub.astro";
 import RSS from "./icons/RSS.astro";
 
-const iconClass = "h-8 w-8 hover:text-slate-50 hover:fill-current";
+const iconClass = "h-6 w-6 text-slate-400 transition-colors hover:text-blue-500";
 ---
 
-<div
-  class="footer flex h-20 w-full flex-row items-center justify-center gap-8 bg-blue-300"
+<footer
+  class="mt-16 flex w-full flex-row items-center justify-center gap-6 border-t border-slate-200 py-8"
 >
-  <a href="https://www.twitter.com/rambleraptor">
+  <a href="https://www.twitter.com/rambleraptor" aria-label="Twitter">
     <Twitter className={iconClass} />
   </a>
-  <a href="https://www.github.com/rambleraptor">
+  <a href="https://www.github.com/rambleraptor" aria-label="GitHub">
     <GitHub className={iconClass} />
   </a>
-  <a href="https://www.letterboxd.com/rambleraptor">
+  <a href="https://www.letterboxd.com/rambleraptor" aria-label="Letterboxd">
     <Letterboxd className={iconClass} />
   </a>
-  <a href="https://www.linkedin.com/in/rambleraptor">
+  <a href="https://www.linkedin.com/in/rambleraptor" aria-label="LinkedIn">
     <LinkedIn className={iconClass} />
   </a>
-  <a href="/feed.xml">
+  <a href="/feed.xml" aria-label="RSS Feed">
     <RSS className={iconClass} />
   </a>
-</div>
+</footer>

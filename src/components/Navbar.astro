@@ -3,23 +3,39 @@
 ---
 
 <nav
-  class="container relative mx-auto flex flex-wrap justify-between justify-between gap-4 p-3 pt-6 md:p-6"
+  class="container relative mx-auto flex max-w-3xl flex-wrap items-center justify-between gap-4 px-6 py-8 md:px-8"
 >
-  <a class="text-2xl font-extrabold capitalize" href="/">Alex Stephen</a>
+  <a class="text-xl font-bold text-slate-900 hover:text-blue-500" href="/"
+    >Alex Stephen</a
+  >
 
-  <ul class="relative flex w-auto flex-row items-center gap-6 p-0">
+  <ul class="relative flex w-auto flex-row items-center gap-8 p-0">
     <li>
-      <a class="mr-2" href="/writing">Writing</a>
+      <a
+        class="text-slate-600 transition-colors hover:text-slate-900"
+        href="/writing">Writing</a
+      >
     </li>
     <li>
-      <a class="mr-2" href="/talks">Talks</a>
+      <a
+        class="text-slate-600 transition-colors hover:text-slate-900"
+        href="/talks">Talks</a
+      >
     </li>
   </ul>
 </nav>
 
 <style>
-  nav a:link {
+  nav a {
     text-decoration: none;
-    font-weight: 300;
+    font-weight: 500;
+  }
+
+  nav ul {
+    list-style: none;
+  }
+
+  nav li {
+    margin: 0;
   }
 </style>
