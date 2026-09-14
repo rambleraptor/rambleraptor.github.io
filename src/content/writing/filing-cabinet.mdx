@@ -24,7 +24,7 @@ At this point, if I like 80% of a piece of software, it's now worth it for me to
 # My Documents App
 
 <Video src="/writing/filing-cabinet/documents-classify" label="Uploading a document to the documents app and watching it get automatically categorized">
-  TODO: caption for the classification video
+  Each category of documents is like it's own folder. In the real world, filing cabinet folders never stay property organized.
 </Video>
 
 This is my documents app. It relies on the idea that everything that I'm going to upload can be easily categorized - tax documents, medical receipts, charitable donations, etc. Every time I upload a document, it's automatically categorized, and category-specific metadata is pulled out. It turns out that LLMs are fantastic at document categorization. Once a document has been categorized, I can have the LLM pull out specific metadata, like ingredients from a recipe or a property tax total from a property tax notice.
@@ -43,17 +43,17 @@ This is all inherently personal. It was important for me to be able to upload co
     {
       src: charitableReceipts,
       alt: "Charitable receipts view showing donation totals by organization",
-      caption: "TODO: caption for charitable receipts",
+      caption: "All of the charitable receipts are categorized in the exact way my accountant asks",
     },
     {
       src: medicalReceipts,
       alt: "Medical receipts view showing HSA totals by category",
-      caption: "TODO: caption for medical receipts",
+      caption: "I'm supposed to be keeping my medical receipts for my HSA. I don't understand why, but I'm sure I'll regret it in a decade if I don't.",
     },
     {
       src: recipeDetail,
       alt: "Recipe view for skillet buttermilk cornbread with its ingredient list",
-      caption: "TODO: caption for recipes",
+      caption: "One click adds all the ingredients to my overengineered grocery list",
     },
   ]}
 />
@@ -63,7 +63,7 @@ Then, there's the security portion of this. I do not want these documents living
 At this point, you might be screaming at your monitor about handing my documents over to an LLM for categorization. After all, now my tax returns are going to be used for training data! Yeah, that's the real flaw in my system. I built out a redaction flow that helps me manually redact documents before they're sent to Gemini. I'd like to eventually try a local LLM for document categorization. I've done some preliminary work with Gemma on my phone and it seems very promising.
 
 <Video src="/writing/filing-cabinet/documents-redaction" label="Redacting sensitive fields on an insurance card before uploading it">
-  TODO: caption for the redaction video
+  The documents sent over the wire have these sensitive values replaced so that there's nothing to unintentionally read.
 </Video>
 
 As I've been building more and more apps for the family, I've been a lot of commonalities in what I want. I want access controls, MCP support, CLIs for agent operations, users, bulk importing/export support. I ended up building out an open-source framework called [Homestead](http://myhomestead.dev) to provide these for all of my apps. The documents app is one of many apps I've built on top of my Homestead server. I just described the schema for my data, wired up some React components, and I got everything else for free. I've shared just the tax receipts with my accountant, the recipes with my parents, and a Pictionary game tracker with my extended family.
