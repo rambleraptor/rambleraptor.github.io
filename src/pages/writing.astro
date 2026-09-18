@@ -1,5 +1,6 @@
 ---
 import WritingList from "../components/writing/WritingList.astro";
+import PageHeader from "../components/PageHeader.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { getAllPosts } from "../utils/posts";
 
@@ -7,11 +8,11 @@ const allPosts = await getAllPosts();
 ---
 
 <BaseLayout title="Alex Stephen - Writing" description="Alex Stephen - Writing">
-  <h1>Writing</h1>
-  <p>
-    I'm an aspiring writer. I love talking about pop culture, technology, and
-    business through the lens of data and storytelling.
-  </p>
-  <hr />
+  <PageHeader title="Writing">
+    <p>
+      I'm an aspiring writer. I love talking about pop culture, technology, and
+      business through the lens of data and storytelling.
+    </p>
+  </PageHeader>
   <WritingList posts={allPosts} />
 </BaseLayout>

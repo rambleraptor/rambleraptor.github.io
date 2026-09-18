@@ -1,0 +1,23 @@
+---
+import type { CollectionEntry } from "astro:content";
+import BaseLayout from "./BaseLayout.astro";
+import PageHeader from "../components/PageHeader.astro";
+
+// Renders the post title from frontmatter, then the MDX body inside a
+// prose container. Posts should start their headings at h2.
+interface Props {
+  entry: CollectionEntry<"writing">;
+}
+
+const { entry } = Astro.props;
+const { title } = entry.data;
+---
+
+<BaseLayout title={title} description={title}>
+  <article>
+    <PageHeader title={title} />
+    <div class="prose max-w-none md:prose-lg dark:prose-invert">
+      <slot />
+    </div>
+  </article>
+</BaseLayout>

@@ -1,13 +1,22 @@
 ---
 import WritingTags from "./WritingTags.astro";
+import { formatDate } from "../../utils/dates";
 const { entry } = Astro.props;
 ---
 
-<div class="pb-4">
-  <a href={`/writing/${entry.slug}`}>{entry.data.title}</a>
-  <br />
-  <WritingTags tags={entry.data.tags} />
-  <time datetime={entry.data.date.toISOString()}>
-    {entry.data.date.toDateString().split(" ").slice(1).join(" ")}
-  </time>
-</div>
+<li class="flex flex-col gap-1">
+  <a
+    class="text-lg font-medium text-blue-700 hover:underline dark:text-blue-400"
+    href={`/writing/${entry.slug}`}
+  >
+    {entry.data.title}
+  </a>
+  <div
+    class="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-gray-600 dark:text-gray-400"
+  >
+    <time datetime={entry.data.date.toISOString()}>
+      {formatDate(entry.data.date)}
+    </time>
+    <WritingTags tags={entry.data.tags} />
+  </div>
+</li>

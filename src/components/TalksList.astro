@@ -7,20 +7,33 @@ interface Props {
 const { talks } = Astro.props;
 ---
 
-<h1>Talks</h1>
-{
-  talks.data.talks.map((year) => (
-    <section class="prose-ul:list-none">
-      <h3 class="prose-indigo">{year.year}</h3>
-      <ul>
-        {year.conferences.map((conference) => (
-          <li>
-            <a href={conference.video}>{conference.title}</a>
-            <br />
-            {conference.conference}
-          </li>
-        ))}
-      </ul>
-    </section>
-  ))
-}
+<div class="flex flex-col gap-8">
+  {
+    talks.data.talks.map((year) => (
+      <section>
+        <h2 class="mb-3 text-xl font-bold text-gray-950 dark:text-white">
+          {year.year}
+        </h2>
+        <ul class="flex flex-col gap-3">
+          {year.conferences.map((conference) => (
+            <li class="flex flex-col">
+              {conference.video ? (
+                <a
+                  class="font-medium text-blue-700 hover:underline dark:text-blue-400"
+                  href={conference.video}
+                >
+                  {conference.title}
+                </a>
+              ) : (
+                <span class="font-medium">{conference.title}</span>
+              )}
+              <span class="text-sm text-gray-600 dark:text-gray-400">
+                {conference.conference}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))
+  }
+</div>

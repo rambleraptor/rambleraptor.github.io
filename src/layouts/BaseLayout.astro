@@ -3,49 +3,28 @@ import Head from "../components/Head.astro";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 
+// The page shell: head, navbar, a centered column, and footer.
+// It applies no typography of its own. Article bodies opt into prose
+// through PostLayout or PageLayout; index and list pages style themselves.
 interface Props {
-  title?: string;
-  description?: string;
-  frontmatter?: FrontMatter;
-}
-
-interface FrontMatter {
   title: string;
   description: string;
 }
 
-const { title, description, frontmatter } = Astro.props;
-
-var realTitle: string = "";
-var realDescription: string = "";
-if (frontmatter != null) {
-  realTitle = frontmatter!.title;
-  realDescription = frontmatter!.description;
-} else {
-  realTitle = title!;
-  realDescription = description!;
-}
+const { title, description } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
-  <Head title={realTitle} description={realDescription} />
-  <body>
-    <div class="border-8 border-solid border-blue-500"></div>
+  <Head title={title} description={description} />
+  <body
+    class="min-h-screen bg-white text-gray-900 antialiased dark:bg-gray-950 dark:text-gray-100"
+  >
+    <div class="border-t-8 border-solid border-blue-500"></div>
     <Navbar />
-    <div class="container prose prose-lg mx-auto pb-10 pl-3 pr-3">
-      <div><slot /></div>
-    </div>
+    <main class="mx-auto w-full max-w-3xl px-4 pb-16 pt-6 sm:px-6 md:pt-10">
+      <slot />
+    </main>
     <Footer />
-    <style>
-      /* Tailwind is really hard to use, so I have to do this. */
-      .hero-image {
-        margin-top: 0 !important;
-      }
-
-      .list {
-        padding-left: 0px;
-      }
-    </style>
   </body>
 </html>
