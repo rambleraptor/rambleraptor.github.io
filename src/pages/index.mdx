@@ -1,5 +1,5 @@
 ---
-layout: "../layouts/BaseLayout.astro"
+layout: "../layouts/PageLayout.astro"
 title: Alex Stephen
 description: About Alex Stephen
 ---
@@ -7,7 +7,7 @@ description: About Alex Stephen
 import { Image } from "astro:assets";
 import meImage from "../images/me.jpg";
 
-<Image src={meImage} class="img-fluid hero-image" alt="Image of me" />
+<Image src={meImage} class="rounded-lg" alt="Image of me" />
 
 # Hi! I'm Alex!
 

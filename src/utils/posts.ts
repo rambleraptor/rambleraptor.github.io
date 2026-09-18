@@ -52,12 +52,12 @@ export async function getPostsByTag(tag: string): Promise<Post[]> {
 
   // Filter internal posts by tag
   const filteredInternalPosts = internalPosts.filter((post) =>
-    post.data.tags.includes(tag)
+    post.data.tags.includes(tag),
   );
 
   // Filter external posts by tag
   const filteredExternalPosts = externalPosts.filter(
-    (post) => post.tags && post.tags.includes(tag)
+    (post) => post.tags && post.tags.includes(tag),
   );
 
   // Combine and sort

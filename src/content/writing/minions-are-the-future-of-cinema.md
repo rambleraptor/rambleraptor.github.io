@@ -5,8 +5,6 @@ draft: false
 tags: ["popculture"]
 ---
 
-# Minions are the Future of Cinema
-
 I’m gonna tell you about a movie and I want you to guess it. I’m not going to tell you anything about the plot though. I’m just going to tell you about the sidekicks.
 
 There’s a gaggle of wacky creatures that speak only in gestures and gibberish. Some of them are big, some are them are small. Any single one could be pulled right out of a Looney Tunes short or a Charlie Chaplin film. Some of them have names, but most of them don’t. Nobody remembers what they actually did in the movie, but everybody loves the memes.
@@ -23,7 +21,7 @@ Oh, it’s also the Despicable Me / Minions super-franchise.
 
 Over the last decade, animated sidekicks have gone through a transformation. Wise-cracking sidekicks voiced by standup comedians have been replaced by sidekicks known more for their actions than their words. This isn’t an accident. It’s a deliberate move that shows how much the international markets, merchandising, and memes have influenced how movies are being made.
 
-# **It all started with a squirrel…rat**
+## It all started with a squirrel…rat
 
 Before he started Despicable Me studio Illumination Entertainment, Christopher Meledandri led Blue Sky Animation, a small animation studio that was part of 20th Century Fox. Blue Sky Animation’s most endearing franchise was Ice Age, whose first four sequels comprised the [studio’s four most successful films](https://www.boxofficemojo.com/brand/bn3430087170/?ref_=bo_bns_table_16). The original Ice Age was a [critical success](https://www.rottentomatoes.com/m/ice_age) featuring a cast of prehistoric animals learning to become a community, all voiced by well-known celebrities. I dare you to name a single main character in Ice Age or the celebrity that voiced them. Nobody can. But everyone remembers the rabid, grunting squirrel creature and his endless quest to catch his acorn.
 
@@ -37,7 +35,7 @@ Scrat represented a sidekick that was far better suited for the global theater. 
 
 Scrat’s success didn’t end when his franchise did. This model of the looney low-brow sidekick was one of the ideas that Chris Meledandri brought to his next studio, Illumination Entertainment, with the goal of producing lower cost animated films.
 
-# **Enter The Minions**
+## Enter The Minions
 
 In 2010, Illumination Entertainment released its first film: Despicable Me. Critics loved Steve Carrell as Gru and his surprisingly emotional journey from supervillain to father. The movie raked in $543 million on a $69 million budget, proving that Illumination was able to make more profitable animated films than their counterparts.
 
@@ -51,7 +49,7 @@ The Minions movie proved that the Scrat model was the formula for attracting int
 
 This formula didn’t just work for movies. Need a theme park ride that you can take across your international chain? The Minions are perfect. Despicable Me: Minion Mayhem was released in Orlando, copied over in Hollywood, and now exists (or is planned to exist) in every Universal theme park worldwide.
 
-# **The Future**
+## The Future
 
 While the Scrat model has clearly worked for the Minions, the question remains: does it work elsewhere?
 

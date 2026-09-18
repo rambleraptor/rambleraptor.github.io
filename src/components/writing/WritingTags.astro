@@ -1,22 +1,32 @@
 ---
+// Inline tag chips. Rendered inside a flex row by the parent, so this
+// component emits no line breaks or layout of its own.
+interface Props {
+  tags: string[];
+}
+
 const { tags } = Astro.props;
 
-const colors = {
-  popculture: "text-green-600",
-  archive: "text-slate-500",
+const colors: Record<string, string> = {
+  tech: "bg-blue-50 text-blue-800 dark:bg-blue-950 dark:text-blue-300",
+  popculture:
+    "bg-green-50 text-green-800 dark:bg-green-950 dark:text-green-300",
+  archive: "bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300",
 };
+const fallback =
+  "bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300";
 ---
 
 {
-  tags.map((tag: string) => (
-    <>
-      <a
-        class:list={["text-sm", "font-light", colors[tag], "no-underline"]}
-        href={`/writing/tags/${tag}`}
-      >
-        {tag}
-      </a>
-      <br />
-    </>
+  tags.map((tag) => (
+    <a
+      class:list={[
+        "rounded-full px-2 py-0.5 text-xs font-medium no-underline hover:underline",
+        colors[tag] ?? fallback,
+      ]}
+      href={`/writing/tags/${tag}`}
+    >
+      {tag}
+    </a>
   ))
 }

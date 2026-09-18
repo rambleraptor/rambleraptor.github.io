@@ -1,25 +1,28 @@
 ---
-
+// Weights are set per element here. Do not add a scoped `nav a` rule:
+// it would override these utilities.
 ---
 
 <nav
-  class="container relative mx-auto flex flex-wrap justify-between justify-between gap-4 p-3 pt-6 md:p-6"
+  class="mx-auto flex w-full max-w-3xl flex-wrap items-baseline justify-between gap-4 px-4 pb-3 pt-6 sm:px-6 md:pt-8"
 >
-  <a class="text-2xl font-extrabold capitalize" href="/">Alex Stephen</a>
+  <a
+    class="text-2xl font-extrabold tracking-tight text-gray-950 no-underline dark:text-white"
+    href="/">Alex Stephen</a
+  >
 
-  <ul class="relative flex w-auto flex-row items-center gap-6 p-0">
+  <ul class="flex flex-row items-center gap-6">
     <li>
-      <a class="mr-2" href="/writing">Writing</a>
+      <a
+        class="font-light text-gray-700 no-underline hover:text-gray-950 dark:text-gray-300 dark:hover:text-white"
+        href="/writing">Writing</a
+      >
     </li>
     <li>
-      <a class="mr-2" href="/talks">Talks</a>
+      <a
+        class="font-light text-gray-700 no-underline hover:text-gray-950 dark:text-gray-300 dark:hover:text-white"
+        href="/talks">Talks</a
+      >
     </li>
   </ul>
 </nav>
-
-<style>
-  nav a:link {
-    text-decoration: none;
-    font-weight: 300;
-  }
-</style>

@@ -1,0 +1,30 @@
+---
+import type { CollectionEntry } from "astro:content";
+import BaseLayout from "./BaseLayout.astro";
+import PageHeader from "../components/PageHeader.astro";
+import WritingTags from "../components/writing/WritingTags.astro";
+import { formatDate } from "../utils/dates";
+
+// Renders the article frame (title, date, tags) from frontmatter, then the
+// MDX body inside a prose container. Posts should start their headings at h2.
+interface Props {
+  entry: CollectionEntry<"writing">;
+}
+
+const { entry } = Astro.props;
+const { title, date, tags } = entry.data;
+---
+
+<BaseLayout title={title} description={title}>
+  <article>
+    <PageHeader title={title}>
+      <div class="flex flex-wrap items-center gap-x-3 gap-y-1">
+        <time datetime={date.toISOString()}>{formatDate(date)}</time>
+        <WritingTags tags={tags} />
+      </div>
+    </PageHeader>
+    <div class="prose max-w-none md:prose-lg dark:prose-invert">
+      <slot />
+    </div>
+  </article>
+</BaseLayout>

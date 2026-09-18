@@ -1,0 +1,20 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+
+// For Markdown/MDX pages (like the home page) whose whole body is prose.
+interface Props {
+  title?: string;
+  description?: string;
+  frontmatter?: { title: string; description: string };
+}
+
+const { frontmatter, title, description } = Astro.props;
+const realTitle = frontmatter?.title ?? title ?? "";
+const realDescription = frontmatter?.description ?? description ?? realTitle;
+---
+
+<BaseLayout title={realTitle} description={realDescription}>
+  <div class="prose max-w-none md:prose-lg dark:prose-invert">
+    <slot />
+  </div>
+</BaseLayout>

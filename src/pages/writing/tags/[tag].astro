@@ -1,5 +1,6 @@
 ---
 import WritingList from "../../../components/writing/WritingList.astro";
+import PageHeader from "../../../components/PageHeader.astro";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
 import { getAllTags, getPostsByTag } from "../../../utils/posts";
 
@@ -20,6 +21,13 @@ const posts = await getPostsByTag(tag);
   title=`Alex Stephen - Writing / ${tag}`
   description=`Alex Stephen - Writing / ${tag}`
 >
-  <h1>Writing / {tag}</h1>
+  <PageHeader title={`Writing / ${tag}`}>
+    <p>
+      <a
+        class="text-blue-700 hover:underline dark:text-blue-400"
+        href="/writing">All writing</a
+      >
+    </p>
+  </PageHeader>
   <WritingList posts={posts} />
 </BaseLayout>
