@@ -5,7 +5,7 @@ import BaseLayout from "./BaseLayout.astro";
 interface Props {
   title?: string;
   description?: string;
-  frontmatter?: { title: string; description: string };
+  frontmatter?: { title: string; description: string; jsonLd?: object };
 }
 
 const { frontmatter, title, description } = Astro.props;
@@ -13,7 +13,11 @@ const realTitle = frontmatter?.title ?? title ?? "";
 const realDescription = frontmatter?.description ?? description ?? realTitle;
 ---
 
-<BaseLayout title={realTitle} description={realDescription}>
+<BaseLayout
+  title={realTitle}
+  description={realDescription}
+  jsonLd={frontmatter?.jsonLd}
+>
   <div class="prose max-w-none md:prose-lg dark:prose-invert">
     <slot />
   </div>

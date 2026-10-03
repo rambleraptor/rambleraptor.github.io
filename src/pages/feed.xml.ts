@@ -15,6 +15,7 @@ export async function GET(context) {
     // See "Generating items" section for examples using content collections and glob imports
     items: writing.map((post) => ({
       title: post.data.title,
+      description: post.data.description,
       pubDate: post.data.date,
       link: `/writing/${post.slug}/`,
     })),

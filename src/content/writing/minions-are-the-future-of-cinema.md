@@ -1,5 +1,6 @@
 ---
 title: "Minions Are the Future of Cinema"
+description: "How Scrat, the Minions, and Porgs reveal the way international box office, merchandising, and memes reshaped the animated movie sidekick."
 date: 2022-06-29
 draft: false
 tags: ["popculture"]
