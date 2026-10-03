@@ -4,6 +4,8 @@ const writingCollection = defineCollection({
   type: "content",
   schema: z.object({
     title: z.string(),
+    // Used for the meta description, social previews, and RSS.
+    description: z.string(),
     date: z.date(),
     draft: z.boolean(),
     tags: z.array(z.string()),

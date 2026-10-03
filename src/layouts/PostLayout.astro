@@ -10,10 +10,31 @@ interface Props {
 }
 
 const { entry } = Astro.props;
-const { title } = entry.data;
+const { title, description, date, tags } = entry.data;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  headline: title,
+  description: description,
+  datePublished: date.toISOString(),
+  url: new URL(Astro.url.pathname, Astro.site).href,
+  image: new URL("/og-image.png", Astro.site).href,
+  keywords: tags.join(", "),
+  author: {
+    "@type": "Person",
+    name: "Alex Stephen",
+    url: Astro.site?.href,
+  },
+};
 ---
 
-<BaseLayout title={title} description={title}>
+<BaseLayout
+  title={`${title} | Alex Stephen`}
+  description={description}
+  type="article"
+  jsonLd={jsonLd}
+>
   <article>
     <PageHeader title={title} />
     <div class="prose max-w-none md:prose-lg dark:prose-invert">

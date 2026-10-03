@@ -5,26 +5,40 @@ import LinkedIn from "./icons/LinkedIn.astro";
 import GitHub from "./icons/GitHub.astro";
 import RSS from "./icons/RSS.astro";
 
+const linkClass =
+  "text-gray-900 no-underline hover:text-white dark:text-gray-100 dark:hover:text-white";
 const iconClass =
   "h-8 w-8 fill-current text-gray-900 hover:text-white dark:text-gray-100 dark:hover:text-white";
 ---
 
-<div
-  class="flex h-20 w-full flex-row items-center justify-center gap-8 bg-blue-300 dark:bg-blue-900"
+<footer
+  class="flex w-full flex-col items-center gap-4 bg-blue-300 py-6 dark:bg-blue-900"
 >
-  <a href="https://www.twitter.com/rambleraptor">
-    <Twitter className={iconClass} />
-  </a>
-  <a href="https://www.github.com/rambleraptor">
-    <GitHub className={iconClass} />
-  </a>
-  <a href="https://www.letterboxd.com/rambleraptor">
-    <Letterboxd className={iconClass} />
-  </a>
-  <a href="https://www.linkedin.com/in/rambleraptor">
-    <LinkedIn className={iconClass} />
-  </a>
-  <a href="/feed.xml">
-    <RSS className={iconClass} />
-  </a>
-</div>
+  <div class="flex flex-row items-center justify-center gap-8">
+    <a href="https://www.twitter.com/rambleraptor" aria-label="Twitter">
+      <Twitter className={iconClass} />
+    </a>
+    <a href="https://www.github.com/rambleraptor" aria-label="GitHub">
+      <GitHub className={iconClass} />
+    </a>
+    <a href="https://www.letterboxd.com/rambleraptor" aria-label="Letterboxd">
+      <Letterboxd className={iconClass} />
+    </a>
+    <a href="https://www.linkedin.com/in/rambleraptor" aria-label="LinkedIn">
+      <LinkedIn className={iconClass} />
+    </a>
+    <a href="/feed.xml" aria-label="RSS feed">
+      <RSS className={iconClass} />
+    </a>
+  </div>
+  <nav
+    class="flex flex-row flex-wrap items-center justify-center gap-6 text-sm"
+  >
+    <a class={linkClass} href="/">Home</a>
+    <a class={linkClass} href="/writing">Writing</a>
+    <a class={linkClass} href="/talks">Talks</a>
+    <a class={linkClass} href="mailto:astephen2@gmail.com"
+      >astephen2@gmail.com</a
+    >
+  </nav>
+</footer>

@@ -5,9 +5,13 @@ import Plausible from "./Plausible.astro";
 interface Props {
   title: string;
   description: string;
+  type?: "website" | "article";
+  // Structured data (schema.org) rendered as JSON-LD.
+  jsonLd?: object;
 }
 
-const { title, description } = Astro.props;
+const { title, description, type = "website", jsonLd } = Astro.props;
+const image = new URL("/og-image.png", Astro.site).href;
 ---
 
 <head>
@@ -23,25 +27,44 @@ const { title, description } = Astro.props;
     openGraph={{
       basic: {
         title: title,
-        type: "website",
-        image: "https://www.alexstephen.me/og-image.svg",
+        type: type,
+        image: image,
+      },
+      optional: {
+        description: description,
+        siteName: "Alex Stephen",
+      },
+      image: {
+        width: 1200,
+        height: 630,
+        alt: "Alex Stephen, Software Engineer",
       },
     }}
     twitter={{
+      card: "summary_large_image",
       creator: "@rambleraptor",
+      title: title,
+      description: description,
+      image: image,
     }}
     extend={{
       // extending the default link tags
-      link: [{ rel: "icon", href: "/favicon.ico" }],
-      // extending the default meta tags
-      meta: [
+      link: [
+        { rel: "icon", href: "/favicon.ico" },
+        { rel: "sitemap", href: "/sitemap-index.xml" },
         {
-          name: "twitter:image",
-          content: "https://www.alexstephen.me/og-image.svg",
+          rel: "alternate",
+          type: "application/rss+xml",
+          title: "Alex Stephen",
+          href: "/feed.xml",
         },
-        { name: "twitter:title", content: title },
-        { name: "twitter:description", content: description },
       ],
     }}
   />
+
+  {
+    jsonLd && (
+      <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+    )
+  }
 </head>

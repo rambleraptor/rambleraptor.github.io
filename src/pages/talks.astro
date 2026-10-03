@@ -8,7 +8,10 @@ const allTalkFiles = await getCollection("talks");
 const talks = allTalkFiles[0];
 ---
 
-<BaseLayout title="Alex Stephen - Talks" description="Alex Stephen - Talks">
+<BaseLayout
+  title="Talks | Alex Stephen"
+  description="Conference talks by Alex Stephen on Apache Iceberg, Ansible, Kubernetes, code generation, and cloud developer tooling, with links to videos."
+>
   <PageHeader title="Talks" />
   <TalksList talks={talks} />
 </BaseLayout>

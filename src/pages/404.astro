@@ -1,0 +1,22 @@
+---
+import PageHeader from "../components/PageHeader.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Page Not Found | Alex Stephen"
+  description="This page doesn't exist. Head back to the home page to find Alex Stephen's writing, talks, and contact information."
+>
+  <PageHeader title="Page not found">
+    <p>
+      Sorry, that page doesn't exist. Try the
+      <a class="text-blue-700 hover:underline dark:text-blue-400" href="/"
+        >home page</a
+      > or my
+      <a
+        class="text-blue-700 hover:underline dark:text-blue-400"
+        href="/writing">writing</a
+      >.
+    </p>
+  </PageHeader>
+</BaseLayout>
